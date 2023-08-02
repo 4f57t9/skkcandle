@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	
+	<!-- Connection Pool 생성 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+		<!-- Connection을 생성하기 위한 정보를 설정 -->
+		
+		<!-- 
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"></property>
+		 -->
+		 
+		 <!-- sql문을 로그로 출력하거나, 받은 결과를 로그로 출력하기 위한 설정  -->
+		<property name="driverClassName" value="net.sf.log4jdbc.DriverSpy"></property>
+		<property name="url" value="jdbc:log4jdbc:oracle:thin:@kosa402.iptime.org:1521:orcl"></property>
+		
+		<property name="username" value="user_webteam3"></property>
+		<property name="password" value="oracle"></property>
+		<!-- Connection 수를 관리하는 방법 설정 -->
+		<property name="maxTotal" value="3"></property>
+		<!-- 이니셜사이즈는 1말고 조금 작은 수 2정도가 적당 -->
+		<property name="initialSize" value="2"></property>
+		<property name="maxIdle" value="2"></property><!-- 이니셜 사이즈와 같게설정 -->
+	</bean>
+	
+	<!-- WAS애서 관리하는 Connection Pool 참조  -->
+	<!-- 여기의 id는 위의 bean의 id와 동일하게   -->   <!-- jndi-name="참조이름"  -->  <!-- 참조하는 객체의 타입이 뭔가 -->
+	<!-- <jee:jndi-lookup id="dataSource" jndi-name="jdbc/spring" expected-type="javax.sql.DataSource"></jee:jndi-lookup> -->
+
+</beans>

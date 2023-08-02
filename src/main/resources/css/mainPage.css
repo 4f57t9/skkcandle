@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+	border: 0;
+	padding: 0;
+}
+
+#container {
+	background-color: #fff;
+	position: relative;
+	min-width: 1020px;
+}
+
+.main_bg_area {
+	position: relative;
+    height: 450px;
+    background: #fafafa;
+}
+
+.main_bg_img {
+	position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+}
+
+.main_bg_selector_area {
+    position: relative;
+    width: 1020px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main_bg_link {
+    /* display: block; */
+    width: 1020px;
+    height: 450px;
+    background: url("//img1a.coupangcdn.com/image/coupang/common/ico_blank.png");
+}
+
+.main_bg_area .img_link {
+    /* display: block; */
+    width: 1020px;
+    height: 450px;
+    background: url("//img1a.coupangcdn.com/image/coupang/common/ico_blank.png");
+}
+
+.main_bg_selector_box {
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.3);
+}
+
+.selector_thumb_nail {
+    position: relative;
+}
+
+.main_bg_area .frame {
+    border-top: 1px solid #fff;
+}
+
+.selector_thumb_nail .frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #fff;
+}
+
+.main_bg_area .selected .frame {
+	border: 2px solid #4285f4;
+}
+

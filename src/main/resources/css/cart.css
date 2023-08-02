@@ -1,0 +1,387 @@
+@charset "UTF-8";
+
+
+.wrap{
+	position: relative;
+    clear: both;
+    width: 100%;
+    height: 100%;    
+}
+
+body{
+	background-color: #f0f0f0;
+}
+
+header{
+	position: relative;
+    width: 980px;
+    height: 70px;
+    border-bottom: 2px solid #8a8a8a;
+    margin: 0 auto -1px;
+}
+
+.wrap{
+	position: relative;
+    clear: both;
+    width: 100%;
+    height: 100%;
+}
+.logo a{
+	display: block;
+    width: 140px;
+    height: 37px;
+    background: url(//img1a.coupangcdn.com/image/static/common/bg_gnb_sprite_20140122.png) no-repeat -988px -108px;
+}
+.contents-cart{ /*같이 보면 좋은 상품 바로 위까지 감싼다*/
+	position: relative;
+    width: 980px;
+    border: 1px solid #e0e0e0;
+    margin: 0 auto 70px;
+    padding: 40px 39px;
+    background: #fff;
+}
+
+.cart-title{
+	clear: both;
+    height: 45px;
+    margin-bottom: 0;
+    padding-bottom: 32px;
+    background: url(//img1a.coupangcdn.com/image/order/img_orderstep4.gif) no-repeat 0 -200px;
+}
+
+.cartTable{
+	width: 898px;
+    border-top: 0;
+}
+
+.cartTable .head th {
+    background: #fafafa;
+    text-align: center;
+}
+
+.cartTable .head {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-item-name, .product-name {
+    margin-right: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: #55575f;
+}
+
+.cartTable thead tr {
+	vertical-align: middle;
+	font-size: 15px;
+	position: relative;
+}
+
+.cartTable thead tr th {
+	border-bottom: 1px solid #ddd;
+}
+
+.cartTable thead tr th label {
+	position: absolute;
+	left: 20px;
+	height: 2px;
+	top: 10px;
+}
+.cartTable th {
+    height: 40px;
+    font-size: 13px;
+}
+
+.cartTable td {
+    border-bottom: 1px solid #ddd;
+    line-height: 35px;
+    text-align: center;
+}
+
+
+.cartTable .cart-bundle-title {
+    text-align: left;
+    line-height: 16px;
+}
+
+.unit-total-price{
+	border-left: 1px solid #ddd;
+}
+
+.delivery-fee {
+    border-left: 1px solid #ddd;
+    font-size: 12px;
+    color: #888;
+}
+
+.delivery-date, .delivery-date.modify-padding {
+    padding-top: 6px;
+}
+
+.cart-deal-item td.product-box {
+    padding: 10px 5px 10px 15px;
+    text-align: left;
+    vertical-align: top;
+    z-index: 100;
+}
+ 
+ .product-name-part {
+ 	border-bottom: 1px solid #e2e5e7;
+    padding-bottom: 5px;
+    letter-spacing: -1px;
+ }
+ 
+.cart-bundle-title {
+    padding: 26px 22px 24px;
+    text-align: left;
+}
+
+.delivery-date {
+    font-size: 13px;
+    color: #111;
+    line-height: 15px;
+    letter-spacing: -.5px;
+    clear: both;
+}
+
+.option-item-info {
+    float: left;
+    max-width: 330px;
+    position: relative;
+}
+ 
+ .option-item-info span {
+    color: #00891a;
+}
+ 
+ .badge-list .badge-item {
+    float: left;
+    width: auto;
+}
+
+.option-benefit {
+    float: right;
+    padding-top: 10px;
+    width: 100%;
+    line-height: 12px;
+    font-size: 12px;
+    color: #888;
+    text-align: right;
+}
+
+.option-price-part {
+    float: right;
+    font-size: 12px;
+    line-height: 24px;
+    display: inline-block;
+}
+
+.unit-price-area .unit-price {
+    color: #777881;
+    text-align: right;
+    letter-spacing: 0;
+}
+
+.unit-cost {
+    color: #888;
+    letter-spacing: 0;
+    vertical-align: top;
+}
+   
+.promo-cash-benefit__icon {
+    display: inline-block;
+    background-image: url(//img1a.coupangcdn.com/image/cart/generalCart/ico_cash_2x.png);
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    vertical-align: text-bottom;
+}
+
+.option-benefit .promo-cash-benefit {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 2px 6px;
+    margin-left: 5px;
+    color: #333;
+}
+
+.bundle-price-total td {
+    position: relative;
+    padding: 20px 35px 16px 0;
+    background: #f7f7f7;
+    font-size: 12px;
+    line-height: 29px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+}
+
+.rocket-tooltip {
+    display: none;
+    position: absolute;
+    padding: 8px 15px 7px 16px;
+    background: #fff;
+    text-align: left;
+    line-height: 15px;
+    z-index: 100;
+    top: 17px;
+    border: 1px solid #999;
+}
+
+.rocket-tooltip .rocket-info em {
+    color: #00891a;
+}
+
+.symbol-plus {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 8px;
+    vertical-align: -5px;
+    background: url(//img1a.coupangcdn.com/image/order/mathematics-symbol.png) no-repeat;
+    background-position: 0 0;
+}
+
+.symbol-equal {
+	display: inline-block;
+    width: 18px;
+    height: 18px;	
+    margin: 0 8px;
+    background: url(//img1a.coupangcdn.com/image/order/mathematics-symbol.png) no-repeat;
+    vertical-align: -5px;
+    background-position: -36px 0;
+}
+
+.order-table-foot {
+    clear: both;
+    position: relative;
+    padding: 20px 0 35px;
+}
+
+.cart-count-bottom {
+    font-size: 12px;
+    color: #888;
+}
+
+.selected-delete, .selected-soldout-delete {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 12px;
+    color: #111;
+}
+
+.payment-reward-cash-area {
+    position: relative;
+    margin: 20px 0 40px;
+    padding: 20px 20px 20px 54px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.payment-reward-cash-area__icon {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    height: 24px;
+}
+
+.payment-reward-cash-area__title {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+}
+
+.payment-reward-cash-area__desc {
+    display: block;
+    color: #111;
+}
+
+.cart-total-price {
+    clear: both;
+    border: 4px solid #c8c8c8;
+    text-align: center;
+}
+
+.cart-total-price .price-area {
+    padding: 20px 15px 18px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #555;
+    text-align: center;
+}
+
+.cart-total-price em {
+    padding: 0 4px 0 5px;
+    font: 700 17px/17px tahoma;
+    color: #111;
+}
+
+.symbol-plus1 {
+    margin: 0 11px 0 10px;
+    vertical-align: -4px;
+    background: url(//img1a.coupangcdn.com/image/www/newBuy/img_plus_2.gif) no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 18px; 
+}
+
+.symbol-equal1 {
+    background: url(//img1a.coupangcdn.com/image/www/newBuy/img_equals_2.gif) no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 11px 0 10px;
+    vertical-align: -4px; 
+}
+
+.cart-total-price .final-order-price {
+    color: #ea0000;
+    font-size: 20px;
+}
+
+.goShopping {
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    width: 216px;
+    line-height: 18px;
+    border: 2px solid #0073e9;
+    border-radius: 4px;
+    padding: 22px 0 19px;
+    text-align: center;
+    background: #fff;
+    color: #0073e9;
+    margin-right: 5px;
+}
+
+.goPayment{
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    width: 216px;
+    line-height: 18px;
+    border: 2px solid #0073e9;
+    border-radius: 4px;
+    padding: 22px 0 19px;
+    text-align: center;
+    background: #0073e9;
+    color: #fff;
+} 
+
+.order-buttons {
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+

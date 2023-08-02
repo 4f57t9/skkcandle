@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- 빈 이름으로 객체를 찾아서 이용하므로 id가 필수 -->
+	<!-- 
+	방법 1 : commons-fileupload 라이브러리를 이용
+	maxUploadSize : 전체 요청 바디의 사이즈 제한 : 100MB (1024 * 1024 * 100)
+	maxUploadSizePerFile : 요청 바디에 포함된 파일 하나당의 크기를 제한  : 20 MB (1024 * 1024 * 20) 
+	uploadTempDir : 임시 파일 이 저장될 디렉토리
+	maxInMemorySize : 임시 파일로 저장하는 크기의 기준 : 1M (1024 * 1024)
+	 -->
+	<!--  
+	<bean id="multipartResolver" 
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="104857600"></property>
+		<property name="maxUploadSizePerFile" value="20971520"></property>
+		<property name="uploadTempDir" value="file:/C:/Temp"></property>
+		<property name="maxInMemorySize" value="1048576"></property>
+	</bean>
+	 -->	
+	 
+	 <!-- 
+	 방법 2 : 서블릿 3.0 이상에서 지원한느 표준 라이브러리를 이용
+	 web.xml 에 설정 내용을 추가 
+
+	
+	 
+	  -->
+	 <bean id="multipartResolver"
+	 	class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
+	 	
+	 </bean>
+	 
+</beans>

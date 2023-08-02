@@ -7,5 +7,14 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	<!-- 
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/ch13/**"/>spring 에서는 ** 처럼 아스타를 2개 사용해야한다.
+			<mvc:exclude-mapping path="/resources/**"/>
+		bean : 객체 생성
+			<bean class="com.mycompany.springwebapp.interceptor.Ch13LoginCheckInterceptor"/> 
+		</mvc:interceptor>
+	</mvc:interceptors>
+	 -->
 </beans>

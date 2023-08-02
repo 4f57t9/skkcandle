@@ -156,5 +156,45 @@
 	    <version>1.2</version>
 	</dependency>
 	
+	<!--  
+	Ch13
+	스프링 프레임워크 MyBatis를 사용하기 위해 필요한 라이브러리
+	-->
+	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis</artifactId>
+	    <version>3.5.13</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+	<dependency>
+	    <groupId>org.mybatis</groupId>
+	    <artifactId>mybatis-spring</artifactId>
+	    <version>2.1.1</version>
+	</dependency>
+
+	<!-- 
+	Ch13
+	PasswordEncoder를 사용하기 위해 필요한 라이브러리
+	-->
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-core</artifactId>
+	    <version>5.5.8</version>
+	</dependency>
+	 
+	<!-- 
+	Ch14
+	AOP 사용을 위한 의존 라이브러리
+	 -->
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>1.9.19</version>
+	    <scope>runtime</scope>
+	</dependency>
+	
  </dependencies>
 </project>
