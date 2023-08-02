@@ -13,8 +13,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 		
-		<link rel="stylesheet" href="mainPage.css">
-		<script src="mainPage.js"></script>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/mainPage.css">
+		<script src="${pageContext.request.contextPath}/resources/js/mainPage.js"></script>
 	</head>
 	<body>
 		<div id="container">

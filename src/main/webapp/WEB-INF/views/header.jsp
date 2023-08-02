@@ -14,7 +14,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 		
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
-		<script src="${pageContext.request.contextPath}/js/header.js"></script>
+		<script src="${pageContext.request.contextPath}/resources/js/header.js"></script>
 	</head>
 	<body>
 		<div id="container">
