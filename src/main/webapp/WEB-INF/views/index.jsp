@@ -7,6 +7,6 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		sgkim 브런치 테스트
+		sgkim 브런치 테스트 2
 	</body>
 </html>
