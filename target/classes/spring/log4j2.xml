@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <Console name="Out" target="SYSTEM_OUT">
+      <PatternLayout pattern="%-5level: %d{DEFAULT} %logger{1}.%M() - %msg%n"/>
+    </Console>
+  </Appenders>
+  
+  <Loggers>
+    <Logger name="com.mycompany.springwebapp" level="info" additivity="false">
+      <AppenderRef ref="Out"/>
+    </Logger>
+    <!-- Webapplication이 DB로 보내는 SQL문을 로그로 출력하기 위한 설정 -->
+    <Logger name="jdbc.sqlonly" level="info" additivity="false">
+      <AppenderRef ref="Out"/>
+    </Logger>
+    <!-- DB가 보내는 결과를 로그로 출력하기 위한 설정 -->
+    <Logger name="jdbc.resultest" level="info" additivity="false">
+      <AppenderRef ref="Out"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="Out"/>
+    </Root>
+  </Loggers>
+</Configuration>
