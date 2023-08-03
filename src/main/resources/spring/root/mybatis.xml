@@ -9,7 +9,6 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- 주어진 DataSource를 이용해서 DB와 연동하고, XML 파일을 이용해서 SQL문을 생성하고 실행하는 역할 -->
 	<bean 
 		id="sqlSessionFactory" 
 		class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -18,19 +17,10 @@
 		<property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"></property>
 	</bean>
 	
-	<!-- 자바 코드에서 SqlSessionFactoryBean 객체를 쉽게 이용할 수 있도록 제공되는 객체 -->
-	<!-- 실제 코드에서는 아래를 사용하는건데 아래코드가 위의 bean객체코드를 사용한다. -->
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 	
-	<!-- mapper이라는 어노테이션을 통해 해당 패키지의 것들을 찾기위해 -->
-	<!-- MyBatis의 DAO 구현 객체를 생성하기 위한 인터페이스의 위치를 설정 
-		1) base-package : 지정된 페키지 아래에서 매퍼 인터페이스를 검색
-		2) annotation="org.apache.ibatis.annotations.Mapper : 
-		  @Mapper 어노테이션이 붙어있는 인터페이스만 메퍼로 등록하고(매퍼 XML과 연동)하고   구현 객체를 자동으로 생성해서 스프링 관리 빈으로 생성
-		   생략되면 base-package 에 있는 모든 하위 인터페이스를 메퍼로 등록(매퍼 XML과 연동)하고, 구현 객체를 자동으로 생성해서 스프링 관리 빈으로 생성
-	-->
 	<mybatis-spring:scan 
 		base-package="com.skkcandle.dao"
 		annotation="org.apache.ibatis.annotations.Mapper"/>
