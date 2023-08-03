@@ -13,7 +13,7 @@ public class cartController {
 	@RequestMapping("")
 	public String cart() {
 		return "/cart/cart";
-	}
+	}  
 
  // @GetMapping("cartlist")
    // public Cart read() {
