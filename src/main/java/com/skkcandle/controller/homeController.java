@@ -20,6 +20,11 @@ public class homeController {
 		return "newHeader";
 	}
 	
+	@RequestMapping("/header")
+	public String header() {
+		return "header";
+	}
+	
 	@PostMapping("/writeReview")
 	public String writeReview(Review review) {
 		

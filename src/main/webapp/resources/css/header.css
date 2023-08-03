@@ -68,9 +68,9 @@ menu {
 .header_area #header {
     position: relative;
     width: 980px;
-    height: 115px;
+    height: 150px;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 30px;
     background: #fff;
 }
 
@@ -79,36 +79,68 @@ menu {
 }
 
 #header section {
-	position: absolute;
+	/* position: absolute; */
     width: 880px;
     height: 91px;
-    margin: 25px 0 0 140px;
+    margin: 0 auto;
+    /* margin: 25px 0 0 140px; */
 }
 
 div.clearFix {
 	position: relative;
 	z-index: 3;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
-#header section h1 {
+
+
+/* #header section h1 {
     width: 174px;
     height: 41px;
     margin: 2px 20px 0 0;
     float: left;
-}
+} */
 
-#header section h1 a {
+/* #header section h1 a {
     display: block;
     height: 41px;
+} */
+
+#search_bar {
+	height: 40px;
+}
+
+#search_bar > form {
+	height: 40px;
 }
 
 .search {
+	border-radius: 30px;
+	width: 245px;
+	text-indent: 10px;
+}
+
+.form-group {
 	position: relative;
-	float: left;
-	width: 518px;
-	height: 37px;
-	border: 2px solid #4285f4;
-	margin-right: 22px;
+}
+
+.zindex {
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    right: 10px;
+    padding: 0;
+    background: #88c8bc;
+    border: 1px solid #88c8bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search_form_div {
@@ -360,11 +392,11 @@ div.clearFix {
 }
 
 .icon_menu li {
-	float: left;
+	float: right;
 }
 
 .icon_menu {
-	margin-top: 3px;
+	margin-top: 30px;
     display: block;
     font-size: 12px;
 }
