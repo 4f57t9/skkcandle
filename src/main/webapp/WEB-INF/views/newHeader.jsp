@@ -24,7 +24,7 @@
 						<div id="" class="">
 							<h1>
 								<a href="#">
-									<img src="" alt="이미지를 로드할 수 없습니다">
+									<img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png" alt="이미지를 로드할 수 없습니다">
 								</a>
 							</h1>
 						</div>

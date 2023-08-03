@@ -17,6 +17,7 @@ public class ReviewServiceImpl implements ReviewService{
 	@Override
 	public void writeReview(Review review) {
 		log.info("review: " + review);
+		
 		reviewDao.insert(review);
 	}
 }

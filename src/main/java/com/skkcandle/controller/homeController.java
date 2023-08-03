@@ -17,11 +17,12 @@ public class homeController {
 	
 	@RequestMapping("/")
 	public String index() {
-		return "index";
+		return "newHeader";
 	}
 	
 	@PostMapping("/writeReview")
 	public String writeReview(Review review) {
+		
 		
 		reviewService.writeReview(review);
 		
