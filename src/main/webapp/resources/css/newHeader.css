@@ -26,12 +26,59 @@ ol {
 
 #container {
 	/* position: relative; */
-	background-color: #fff;
     border-bottom: 1px solid #eee;
 }
 
 #header_area {
 	/* position: relative; */
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
+
+#header {
+	/* width: 500px; */
+	margin: 0 auto;
+}
+
+#main_logo {
+	/* position: relative; */
+	text-align: center;
+}
+
+#search_bar {
+	height: 40px;
+}
+
+#search_bar > form {
+	height: 40px;
+}
+
+.search {
+	border-radius: 30px;
+	width: 245px;
+	text-indent: 10px;
+}
+
+.form-group {
+	position: relative;
+}
+
+.zindex {
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-25%, -50%);
+    right: 10px;
+    padding: 0;
+    background: #88c8bc;
+    border: 1px solid #88c8bc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
