@@ -8,6 +8,11 @@
              font-family: "apple sd gothic neo", "맑은 고딕", "malgun gothic", 나눔고딕,
     		  nanumgothic, 돋움, dotum, sans-serif;
          }
+         .maincontainer{
+         	width:900px;
+         }
+         
+         
          
          .border-h {
             
@@ -22,7 +27,7 @@
          }
          .head {
          	position: absolute;
-         	width: 1000px;
+         	width: 800px;
          	padding-top: 30px;
          }
          
@@ -341,193 +346,32 @@
 		  margin: 0;
 		}
          
+         @media(min-width: 1250px){
+         	.maincontainer{
+         	margin:auto;
+         	width:1250px;
+         	}
+         }
+         
+         @media(max-width: 768px){
+         	.maincontainer{
+         	width:700px;
+         	}
+         	body{
+         	font-size:15px;
+         	}
+         	#account-transfer-option{
+         	font-size: 16px;
+         	}
+         	.payMethod{
+         	font-size:12px;
+         	}
+         	.container{
+         	margin-left:5px;
+         	}
+         }
          
          
-/* footer */
-.footer-frame {
-	
-	width: 100%;
-	position: relative;
-	border-top: #ddd solid 2px;
-    background: #fff;
-}
-
-.footer-layer1 {
-	border-bottom: #ddd solid 1px;
-    height: 50px;
-    text-align: center;
-    padding-top: 15px;
-    white-space: nowrap;
-}
-
-.footer-layer1 a {
-	display: inline-block;
-    white-space: nowrap;
-    padding: 0 14px;
-    font-size: 12px;
-    color: #555;
-    height: 12px;
-    border-left: #888 solid 1px;
-}
-
-.footer-layer1 a:first-child{
-	border-left: 0;
-}
-
-.footer-layer1 .site-picker {
-	position: relative;
-    font-size: 14px;
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-    margin-top: -9px;
-    color: #212b36;
-    margin-left: 5px;
-}
-
-.footer-layer1 .site-picker .site-picker-arrow {
-	transition: .3s;
-	display: inline-block;
-    width: 14px;
-    height: 14px;
-    background-color: #333;
-}
-
-.footer-layer2 {
-	width: 1020px;
-    height: 100px;
-    margin: 30px auto;
-    font-size: 12px;
-    color: #555;
-    line-height: 150%;
-}
-
-.footer-layer2 h1 {
-	float: left;
-    width: 150px;
-    background-image: none;
-}
-
-.footer-layer2 h1 a {
-	display: block;
-	width: 117px;
-	height: 34px;
-    overflow: hidden;
-    background: url(//static.coupangcdn.com/image/coupang/common/footer_asset_v8.png) no-repeat;
-	background-position: -19px -34px;
-    text-indent: -99em;
-	margin-left: 10px;
-}
-
-.footer-layer2 a {
-	color: #555;
-}
-
-
-.footer-layer2 address {
-	float: left;
-    width: 260px;
-}
-
-.footer-layer2 .licensee {
-	text-decoration: underline;
-}
-
-.footer-layer2 .contact-info {
-	float: left;
-    width: 340px;
-    color: #555;
-}
-
-.footer-layer2 strong {
-	font-weight: bold;
-    font-size: 12px;
-}
-
-.footer-layer2 .contact-info em {
-	font-size: 24px;
-    font-family: Tahoma;
-    font-weight: bold;
-    display: block;
-    margin: 9px 0 11px 0;
-	font-style: normal;
-}
-
-.footer-layer2 .safe-service {
-	float: left;
-    width: 270px;
-    font-size: 11px;
-}
-
-.footer-layer3 {
-	width: 1020px;
-    height: 80px;
-    margin: 0 auto;
-    position: relative;
-    border-top: #ddd solid 1px;
-}
-
-.footer-layer3 .certification-list {
-	width: 968px;
-	height: 80px;
-	margin: 0 auto;
-	background: url(//static.coupangcdn.com/image/coupang/common/footer_asset_v12.png) no-repeat;
-	background-position: -44px -92px;
-	position: relative;
-}
-
-.footer-layer4 {
-	background: #333;
-    height: 100px;
-}
-
-.footer-layer4 .coupang-copyright {
-	width: 1020px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.footer-layer4 .coupang-copyright p {
-	color: #888;
-    font-size: 11px;
-}
-
-.footer-layer4 .coupang-copyright .info {
-	padding: 21px 0 3px 0;
-}
-
-.footer-layer4 .coupang-copyright .sns-link {
-	position: absolute;
-    top: 23px;
-    right: 0;
-}
-
-.footer-layer4 .coupang-copyright .sns-link li {
-	float: left;
-	list-style: none;
-}
-
-.footer-layer4 .coupang-copyright .sns-link a {
-	width: 34px;
-    height: 34px;
-    margin-right: 8px;
-	display: block;
-    overflow: hidden;
-    background: url(//static.coupangcdn.com/image/coupang/common/footer_asset_v8.png) no-repeat;
-    text-indent: -99em;
-}
-
-.footer-layer4 .coupang-copyright .sns-link a.facebook {
-	background-position: -220px -30px;
-}
-
-.footer-layer4 .coupang-copyright .sns-link a.blog {
-	background-position: -348px -30px;
-}
-
-.footer-layer4 .coupang-copyright .sns-link a.instagram {
-	background-position: -390px -30px;
-}
 
 
       </style>

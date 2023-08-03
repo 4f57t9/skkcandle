@@ -23,15 +23,14 @@
 	</head>
 
 	<body>
-		<div id="wrapper">
+		<div id="" class="container">
 		
 			<!-- 헤더 -->
-			<section class="d-flex-column mx-auto " style="width: 1250px;">
+			<section class="d-flex-column mx-auto maincontainer" >
 				<header class="border-h">
 							<div class="head">
-								<img 
-									src="//image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png"
-									width="174" height="41" alt="쿠팡">
+								<img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png"
+									width="200"  alt="쿠팡">
 							</div>
 					</header>
 			</section>
@@ -39,7 +38,7 @@
 			<hr>
 			
 			<!-- 바디 -->
-			<section class="d-flex-column mx-auto " style="width: 1250px;">
+			<section class="d-flex-column mx-auto maincontainer" >
 					
 					<!-- 페이지창 -->
 				<div class="d-flex justify-content-between" style="border-bottom: 3px solid #777">
@@ -106,18 +105,18 @@
 									<div style=" padding-top:10px; padding-left:16px; padding-bottom:10px;">
 										<span style="display:inline-block; width:155px;"><span id ="balance"> 0 </span><span>원</span></span>
 										<span style="padding-top:20px;">보유 : <span id="cuBal">302</span>원</span>
-										<button id="cuCashInput">쿠팡캐시입력</button>
+										<button id="cuCashInput">적립금</button>
 									</div>
 								
 									<div id="cuCashrow" style="background-color: #f8f8f8; padding-bottom:16px; padding-top:10px;">
 									 	
 										<input id="cuCash" type="number" value="0" placeholder="0" name="cuCash" style="margin-left: 170px;">원 | 
 										<input id="allUse" type="checkbox" name="allUse"> 모두사용
-										<div><button id="cuCashApply" style="margin-left: 170px; margin-top:10px;">쿠팡캐시적용</button></div>
+										<div><button id="cuCashApply" style="margin-left: 170px; margin-top:10px;">적립금</button></div>
 										
 										
 										<div id="cashOver" class="choice-error" style="color: red; padding-left: 17px; margin-left: 170px; display: none;">
-										사용가능한 캐시를 초과 입력하였습니다.
+										사용가능한 적립금을 초과 입력하였습니다.
 										</div>
 									</div> 
 								</td>
@@ -125,41 +124,38 @@
 							
 							<tr>
 								<th>총결제금액</th>
-								<td><span id="price">34,900</span>원<span id="expectPoint" style="margin-left: 100px; display=none;">캐시적립 예정 : <span id="point">399</span>원</span></td>
+								<td><span id="price">${productnum*productprice}</span>원<span id="expectPoint" style="margin-left: 100px; display=none;">캐시적립 예정 : <span id="point">399</span>원</span></td>
 							</tr>
 							<tr>
 								<th>결제 방법</th>
 								<td>
 								 <div class="payMethod">
 									<div id="L_account-transfer" class="payMethod-arrow">
-										<label><input id="account-transfer" class="cash"
+										<label><input id="account-transfer" class="cash payMethod"
 											type="radio" name="pay-method" value="계좌이체" checked="checked"> 계좌이체 </label></div>
 										
 									<div id="L_coupay-money" >
-										<label><input id="coupay-money" class="cash"
-											type="radio" name="pay-method" value="쿠페이머니"> 쿠페이 머니 <img
-											class="rpay-badge rpay-icon-2percent"
-											src="//image7.coupangcdn.com/image/rocketpay/order/icon_max_cashback_v2.png"
-											width="66" height="14" alt="최대 캐시적립"> </label></div>
-									
+										<label><input id="coupay-money" class="cash payMethod"
+											type="radio" name="pay-method" value="쿠페이머니"> 쿠페이 머니  </label></div>
+
 									<div id="L_credit-card">
 										<label><input
-											id="credit-card" class="no-cash" type="radio" name="pay-method"
+											id="credit-card" class="no-cash payMethod" type="radio" name="pay-method"
 											value="신용/체크카드"> 신용/체크카드  </label></div>
 									
 									<div id="L_corporation-card">
 										<label><input
-											id="corporation-card" class="no-cash" type="radio"
+											id="corporation-card" class="no-cash payMethod" type="radio"
 											name="pay-method" value="법인카드"> 법인카드  </label></div>
 									
 									<div id="L_phone">
 										<label><input
-											id="phone" type="radio" class="no-cash" name="pay-method"
+											id="phone" type="radio" class="no-cash payMethod" name="pay-method"
 											value="휴대폰"> 휴대폰  </label></div>
 									
 									<div id="L_deposit-without-bankbook">
 										<label><input
-											id="deposit-without-bankbook" class="cash" type="radio"
+											id="deposit-without-bankbook" class="cash payMethod" type="radio"
 											name="pay-method" value="무통장입금"> 무통장입금(가상계좌)  </label></div>
 									 </div>		
 										
@@ -340,9 +336,6 @@
 								
 							</div>
 							
-							
-							<div  style="font-size: 12px; font-family: sans-serif; color: #555; margin-top: 10px;">* 해외구매대행 / 로켓직구 구매금액은 현금영수증 발행이 제외됩니다.</div>
-							<div  style="font-size: 12px; font-family: sans-serif; color: #555;">* 쿠팡캐시 결제시 현금성 적립액에 한하여 현금영수증이 발행됩니다.</div>
 						</div>
 					</div>
 	
@@ -350,24 +343,8 @@
 					<div class="text-center" id="agreeMessage">위 주문 내용을 확인 하였으며, 회원 본인은 개인정보 이용 및
 						제공(해외직구의 경우 국외제공) 및 결제에 동의합니다.</div>
 					<div class="text-center" id="payButton">
-						<button class="payb" style="border: none; box-shadow: 0 0 0">
-								<div>
-								<img id = "maxCash"
-								style="cursor: pointer; font-size: 11px; width: 96px;"
-								class="paymentRocketpayBtn__tooltip-2percent-cashback"
-								src="//image10.coupangcdn.com/image/rocketpay/checkout/ico_cashback_tip.png"
-								width="96" height="36" alt="최대 캐시적립"> 
-								</div>
-								<div>
-								<img
-								src="//image7.coupangcdn.com/image/rocketpay/checkout/btn_coupay_payment.png"
-								width="250" height="60" alt="쿠페이 머니 결제">
-								</div>
-						</button>
 						<button class="payb" style=" border: none; box-shadow: 0 0 0">
-						
-							<img
-								src="//image7.coupangcdn.com/image/rocketpay-order-image/pc/btn_payment.gif"
+							<img src="//image7.coupangcdn.com/image/rocketpay-order-image/pc/btn_payment.gif"
 								width="260" height="60" alt="결제하기">
 						</button>
 					</div>
@@ -377,81 +354,6 @@
 		</div>	
 		
 		
-				<!-- 하단 footer -->
-			<footer class="footer-frame">
-	         <div class="footer-layer1">
-	            <a href="https://news.coupang.com/" target="_blank">회사소개</a>
-	            <a href="https://ir.aboutcoupang.com/English/home/" target="_blank">Investor Relations</a>
-	            <a href="https://rocketyourcareer.kr.coupang.com" target="_blank">인재채용</a>
-	            <a href="https://wing.coupang.com/vendor/joining/welcome?inflow=WEB_FOOTER_B">입점 / 제휴문의</a>
-	            <a href="https://csmessenger.coupang.com/cs-center/notice/main">공지사항</a>
-	            <a href="https://csmessenger.coupang.com/cs-center/voc/main">고객의 소리</a>
-	            <a href="/np/policies/terms">이용약관</a>
-	            <a href="https://privacy.coupang.com/ko/center/coupang" style="font-weight: bold;"><b>개인정보 처리방침</b></a>
-	            <a href="https://rocketpay.coupang.com/rocketpay/operationTerms/coupangPcFooter">쿠팡페이 이용약관</a>
-	            <a href="https://privacy.coupang.com/ko/land/coupay" style="font-weight: bold;"><b>쿠팡페이 개인정보처리방침</b></a>
-	            <a href="/np/safety">신뢰관리센터</a>
-	            <a href="https://partners.coupang.com/" target="_blank">제휴마케팅</a>
-	            <a href="https://ads.coupang.com" target="_blank">광고안내</a>
-	         </div>
-	
-	         <div class="footer-layer2">
-	            <h1><a href="https://www.coupang.com/" title="COUPANG">COUPANG</a></h1>
-	            <div>
-	               <address>
-	                  상호명 및 호스팅 서비스 제공 : 쿠팡(주)<br>
-	                  대표이사 : 강한승,박대준<br>
-	                  서울시 송파구 송파대로 570 <br>
-	                  사업자 등록번호 : 120-88-00767 <br>
-	                  통신판매업신고 : 2017-서울송파-0680<br>
-	                  <a class="licensee"
-	                     href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208800767"
-	                     target="_blank" title="사업자정보 확인">사업자정보 확인 &gt;</a>
-	               </address>
-	               <div class="contact-info">
-	                  <a class="call-center" href="https://csmessenger.coupang.com/cs-center/chat/main" title="365 고객센터">
-	                     <strong>365고객센터</strong> | 전자금융거래분쟁처리담당<br>
-	                     <em>1577-7011 (유료)</em>
-	                     서울시 송파구 송파대로 570<br>
-	                     <span class="contact-fax">email : help@coupang.com</span>
-	                  </a>
-	               </div>
-	               <p class="safe-service">
-	                  <strong>우리은행 채무지급보증 안내</strong><br>
-	                  <span>
-	                     당사는 고객님이 현금 결제한 금액에 대해<br>우리은행과 채무지급보증 계약을 체결하여<br>안전거래를 보장하고 있습니다.<br>
-	                  </span>
-	                  <a href="https://www.coupang.com/np/etc/popWooriService" target="_blank"
-	                     style="text-decoration: underline;" title="서비스 가입사실 확인">서비스 가입사실 확인
-	                     &gt;</a>
-	               </p>
-	            </div>
-	         </div>
-	
-	         <div class="footer-layer3">
-	            <div class="certification-list">
-	            </div>
-	         </div>
-	
-	         <div class="footer-layer4">
-	            <div class="coupang-copyright">
-	               <p class="info" style="padding-top: 9px;">사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어
-	                  있습니다.<br>
-	                  마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다.<br>
-	                  쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지않습니다.<br>
-	                  쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다.<br>
-	                  Copyright © Coupang Corp. 2010-2022 All Rights Reserved.
-	               </p>
-	               <ul class="sns-link">
-	                  <li><a href="https://www.facebook.com/Coupang.korea" target="_blank" class="facebook"
-	                        title="쿠팡 페이스북">쿠팡 페이스북</a></li>
-	                  <li><a href="https://news.coupang.com/" target="_blank" class="blog" title="쿠팡 뉴스룸">쿠팡 뉴스룸</a></li>
-	                  <li><a href="https://www.instagram.com/coupang" target="_blank" class="instagram" title="쿠팡 인스타그램">쿠팡
-	                        인스타그램</a></li>
-	               </ul>
-	            </div>
-	         </div>
-	      </footer>
 		
 	</body>
 		 
