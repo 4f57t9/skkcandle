@@ -10,6 +10,17 @@
    </head>
    <body>
       <%@include file ="header.jsp" %>
+      
+      <form method="post" action="writeReview">
+      
+      	<input type="number" id="reviewId" name="reviewId">
+      	<input type="number" id="productId" name="productId">
+      	<input type="number" id="userId" name="userId">
+      	<input type="text" id="reviewTitle" name="reviewTitle">
+      	<input type="text" id="reviewContent" name="reviewContent">
+      	<button > 넣기</button>
+      </form>
+      
       <%@include file ="mainPage.jsp" %>
    </body>
 </html>
