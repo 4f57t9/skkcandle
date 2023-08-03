@@ -7,4 +7,5 @@ import com.skkcandle.dto.User;
 @Mapper
 public interface userDao {
 	public User select(int userId);
+	public void insert(User user);
 }
