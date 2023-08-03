@@ -1,0 +1,533 @@
+@charset "UTF-8";
+
+ <style type="text/css">
+         *{
+             clear: both;
+             font-size: 16px;
+             z-index: 20;
+             font-family: "apple sd gothic neo", "맑은 고딕", "malgun gothic", 나눔고딕,
+    		  nanumgothic, 돋움, dotum, sans-serif;
+         }
+         
+         .border-h {
+            
+		    font-family: "돋움",Dotum,sans-serif;
+		    padding: 0;
+		    position: relative;
+		    height: 85px;
+		    margin: 0 auto;
+			border-bottom: solid 1px white;
+		    
+
+         }
+         .head {
+         	position: absolute;
+         	width: 1000px;
+         	padding-top: 30px;
+         }
+         
+         #logo {
+			    cursor: pointer;
+         }
+         
+         
+         form > div {
+            margin: 20px 0;
+         }
+         
+
+         
+         h3 {
+           		font-family: "돋움",Dotum,sans-serif;
+			    margin: 0;
+			    padding: 0;
+			    float: left;
+			    margin-top: 5px;
+			    padding-left: 0;
+			    line-height: 70px;
+			    font-size: 30px;
+			    color: #111;
+			    font-weight: bold;
+			    
+         }
+         
+         h2 {
+         	    font-family: "돋움",Dotum,sans-serif;
+			    margin: 0;
+			    padding: 0;
+			    padding-left: 2px;
+			    margin-bottom: 8px;
+			    font-size: 20px;
+			    font-weight: 700;
+			    color: #333;
+         }
+         
+         
+         
+         table {
+            width: 100%;
+			border: 1px solid #e4e4e4;
+         }
+         
+         .consumerInfo{
+         	border-top: 2px solid #cecece;
+         }
+         
+        .receiverInfo {
+         	border-top: 2px solid #cecece;
+         }
+         
+         .nofn {
+        	border-top: 2px solid #cecece;
+         }
+         
+         .payInfomation{
+         	border-top: 2px solid #cecece;
+         }
+         
+         
+         
+         tr > th {
+            background-color: #F4F4F4;
+            width: 160px;
+            padding: 7px 10px 7px 15px;
+            text-align: right;
+            border: 1px solid #e4e4e4;
+         }
+         
+         tr > td{
+            padding: 10px 16px;
+            border: 1px solid #e4e4e4;
+            
+         }
+         
+         #border1 {
+                border-collapse: collapse;
+			    border-spacing: 0;
+			    margin: 0;
+			    display: inline-block;
+			    height: 17px;
+			    margin-left: 2px;
+			    padding: 2px 2px 0;
+			    font-size: 11px;
+			    font-family: dotum,sans-serif;
+			    line-height: 12px;
+			    vertical-align: middle;
+			    border: 1px solid #00891a;
+			    border-radius: 8px;
+			    color: #555;
+   				 border-color: #555;
+         }
+         #border2 {
+                border-collapse: collapse;
+			    border-spacing: 0;
+			    margin: 0;
+			    display: inline-block;
+			    height: 17px;
+			    margin-left: 2px;
+			    padding: 2px 2px 0;
+			    font-size: 11px;
+			    font-family: dotum,sans-serif;
+			    line-height: 12px;
+			    vertical-align: middle;
+			    border: 1px solid #00891a;
+			    border-radius: 8px;
+			    color: #00891a;
+			   
+         }
+         #border3 {
+                border-collapse: collapse;
+			    border-spacing: 0;
+			    margin: 0;
+			    display: inline-block;
+			    height: 17px;
+			    margin-left: 2px;
+			    padding: 2px 2px 0;
+			    font-size: 11px;
+			    font-family: dotum,sans-serif;
+			    line-height: 12px;
+			    vertical-align: middle;
+			    border: 1px solid #00891a;
+			    border-radius: 8px;
+			    color: #487fda;
+   				border-color: #487fda;
+			   
+         }
+         
+         button {
+            background-color: white;
+            border-collapse: collapse;
+            padding: 4px 8px;
+            border: 1px solid #999;
+            color: #333;
+            border-radius: 2px;
+            box-shadow: 0 -2px 0 rgba(0,0,0,.1) inset;
+            font-size: 11px;
+            
+         	
+         }
+         
+         #transAddress {
+     	    background-color: white;
+            border-collapse: collapse;
+            height: 24px;
+            border: 1px solid #999;
+            color: #333;
+            border-radius: 2px;
+            box-shadow: 0 -2px 0 rgba(0,0,0,.1) inset;
+            font-size: 11px;
+         }
+         
+         #payInfo th {
+	         width: 180px;
+	         text-align: right;
+	         vertical-align: top;
+	         padding-top: 14px;
+	         padding-right: 15px;
+         
+         }
+         
+         .payMethod {
+         	display: flex;
+         	justify-content: space-between;
+         	cursor: pointer;
+         	
+         }
+         
+         .payMethod label{
+         	cursor: pointer;
+         }
+         
+         
+         .payMethod-arrow {
+         	background-image: url(//img1a.coupangcdn.com/image/www/newBuy/cardPaySelector_arrowUp.gif);
+		    background-repeat: no-repeat;
+		    background-position: 50% bottom;
+  		    margin : 0px;
+		    padding-bottom: 10px;
+		    
+         }
+         
+         .pay_select {
+         	 color: #333;
+			 font-family: "돋움",Dotum,sans-serif;
+			 margin: -2px 0px 0px;
+			 padding: 10px;
+			 
+         }
+         
+         .pay_select > div {
+         	height: 35px;
+         	padding: 5px 5px 5px;
+         	text-align: 
+         	font-size: 1rem;
+         }
+         
+         .pay_select label {
+         	cursor: pointer;
+         	font-weight: 700;
+         	
+         
+         }
+         
+         .choice-error {
+            padding-left: 20px;
+		    line-height: 21px;
+		    background-image: url(//img1a.coupangcdn.com/image/www/order2015/icon-alert.png);
+		    background-repeat: no-repeat;
+		    background-position: 0 8px;
+		    padding-top: 3px;
+		    padding-bottom: 0px;
+         }
+
+         #account-transfer-option, #coupay-money-option, #credit-card-option, 
+         #corporation-card-option, #phone-option, #deposit-without-bankbook-option{
+            border-collapse: collapse;
+		    border-spacing: 0;
+		    font-size: 16px;
+		    color: #333;
+		    font-family: "돋움",Dotum,sans-serif;
+		    margin: 0;
+		    margin-top: -2px;
+		    padding: 10px;
+		    border: 2px solid #c5c7cd;
+		    background-color: #f4f6fa;
+         }
+         
+         
+         
+         #deposit-without-bankbook-option-caution span {
+            border-collapse: collapse;
+		    border-spacing: 0;
+		    font-size: 12px;
+		    color: #333;
+		    font-family: "돋움",Dotum,sans-serif;
+		    padding: 0;
+		    list-style: none;
+		    font-weight: 700;
+		    margin: 5px 0 10px;
+         }
+         
+     
+         #deposit-without-bankbook-option-caution ul {
+         	line-height: 1.8;
+         	padding-left: 20px;
+         	 font-size: 12px;
+		    font-family: "돋움",Dotum,sans-serif;
+		    color: #888;
+         
+         }
+         
+         #basicPay {
+         	color: #333;
+		    font-family: "돋움",Dotum,sans-serif;
+		    font-size: 12px;
+         }
+         
+         #selectPay {
+         	color: #333;
+		    font-family: "돋움",Dotum,sans-serif;
+		    font-size: 12px;
+         }
+         
+         .text-center {
+         	position: relative;
+         }	
+         
+         #cash-border {
+         	margin: 0;
+		    border: 1px solid #ddd;
+		    padding: 22px 30px;
+         	
+         }
+         	
+         	
+         
+         #agreeMessage {
+         	font-size: 12px;
+		    color: #333;
+		    font-family: "돋움",Dotum,sans-serif;
+         }
+         
+         #payButton {
+         	margin-top: 30px;
+         	margin-bottom: 60px;
+         }
+         #maxCash {
+            cursor: pointer;
+		    font-family: sans-serif;
+		    color: #333;
+		    font-size: 11px;
+		    width: 96px;
+		    aspect-ratio: auto 96 / 36;
+		    height: 36px;
+		    margin: 0;
+		    border: 0;
+		    padding: 0;
+		    vertical-align: top;
+		    top: -25px;
+		    left: 35%;
+		    position: absolute;
+         	
+         }
+         
+         .redLine {
+         	border: 2px solid red;
+         }
+         
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
+		}
+         
+         
+         
+/* footer */
+.footer-frame {
+	
+	width: 100%;
+	position: relative;
+	border-top: #ddd solid 2px;
+    background: #fff;
+}
+
+.footer-layer1 {
+	border-bottom: #ddd solid 1px;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+    white-space: nowrap;
+}
+
+.footer-layer1 a {
+	display: inline-block;
+    white-space: nowrap;
+    padding: 0 14px;
+    font-size: 12px;
+    color: #555;
+    height: 12px;
+    border-left: #888 solid 1px;
+}
+
+.footer-layer1 a:first-child{
+	border-left: 0;
+}
+
+.footer-layer1 .site-picker {
+	position: relative;
+    font-size: 14px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin-top: -9px;
+    color: #212b36;
+    margin-left: 5px;
+}
+
+.footer-layer1 .site-picker .site-picker-arrow {
+	transition: .3s;
+	display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #333;
+}
+
+.footer-layer2 {
+	width: 1020px;
+    height: 100px;
+    margin: 30px auto;
+    font-size: 12px;
+    color: #555;
+    line-height: 150%;
+}
+
+.footer-layer2 h1 {
+	float: left;
+    width: 150px;
+    background-image: none;
+}
+
+.footer-layer2 h1 a {
+	display: block;
+	width: 117px;
+	height: 34px;
+    overflow: hidden;
+    background: url(//static.coupangcdn.com/image/coupang/common/footer_asset_v8.png) no-repeat;
+	background-position: -19px -34px;
+    text-indent: -99em;
+	margin-left: 10px;
+}
+
+.footer-layer2 a {
+	color: #555;
+}
+
+
+.footer-layer2 address {
+	float: left;
+    width: 260px;
+}
+
+.footer-layer2 .licensee {
+	text-decoration: underline;
+}
+
+.footer-layer2 .contact-info {
+	float: left;
+    width: 340px;
+    color: #555;
+}
+
+.footer-layer2 strong {
+	font-weight: bold;
+    font-size: 12px;
+}
+
+.footer-layer2 .contact-info em {
+	font-size: 24px;
+    font-family: Tahoma;
+    font-weight: bold;
+    display: block;
+    margin: 9px 0 11px 0;
+	font-style: normal;
+}
+
+.footer-layer2 .safe-service {
+	float: left;
+    width: 270px;
+    font-size: 11px;
+}
+
+.footer-layer3 {
+	width: 1020px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    border-top: #ddd solid 1px;
+}
+
+.footer-layer3 .certification-list {
+	width: 968px;
+	height: 80px;
+	margin: 0 auto;
+	background: url(//static.coupangcdn.com/image/coupang/common/footer_asset_v12.png) no-repeat;
+	background-position: -44px -92px;
+	position: relative;
+}
+
+.footer-layer4 {
+	background: #333;
+    height: 100px;
+}
+
+.footer-layer4 .coupang-copyright {
+	width: 1020px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-layer4 .coupang-copyright p {
+	color: #888;
+    font-size: 11px;
+}
+
+.footer-layer4 .coupang-copyright .info {
+	padding: 21px 0 3px 0;
+}
+
+.footer-layer4 .coupang-copyright .sns-link {
+	position: absolute;
+    top: 23px;
+    right: 0;
+}
+
+.footer-layer4 .coupang-copyright .sns-link li {
+	float: left;
+	list-style: none;
+}
+
+.footer-layer4 .coupang-copyright .sns-link a {
+	width: 34px;
+    height: 34px;
+    margin-right: 8px;
+	display: block;
+    overflow: hidden;
+    background: url(//static.coupangcdn.com/image/coupang/common/footer_asset_v8.png) no-repeat;
+    text-indent: -99em;
+}
+
+.footer-layer4 .coupang-copyright .sns-link a.facebook {
+	background-position: -220px -30px;
+}
+
+.footer-layer4 .coupang-copyright .sns-link a.blog {
+	background-position: -348px -30px;
+}
+
+.footer-layer4 .coupang-copyright .sns-link a.instagram {
+	background-position: -390px -30px;
+}
+
+
+      </style>
