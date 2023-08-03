@@ -19,51 +19,28 @@
 		<script src="${pageContext.request.contextPath}/resources/js/newHeader.js"></script>
 	</head>
 	<body>
-		<div id="container">
-			<div id="header_area">
-			    <header id="header">
-			        <div class="container">
-			            <div class="row justify-content-between align-items-center">
-						    <!-- 미니아이콘 -->
-						    <div class="col-auto">
-						        <ul class="d-flex justify-content-between">
-						            <li>
-						                <a href="#">
-						                    <i class="bi bi-heart"></i>
-						                </a>
-						            </li>
-						            <li>		
-						                <a href="#">
-						                    <i class="bi bi-cart"></i>
-						                </a>
-						            </li>
-						        </ul>
-						    </div>
-
-			                <!-- 메인 로고 -->
-			                <div id="main_logo" class="col-auto">
-			                    <h1>
-			                        <a href="#">
-			                            <img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png" width="200" height="100" alt="이미지를 로드할 수 없습니다">
-			                        </a>
-			                    </h1>
-			                </div>
-							
-							<!-- 검색바 -->
-			                <div id="search_bar" class="col-auto">
-							    <form method="get" action="#" class="d-flex align-items-center" style="outline: none;">
-							        <div class="form-group mb-0 mr-2">
-							            <input type="search" class="form-control search" name="search" placeholder="Search...">
-							        </div>
-							        <button type="submit" class="btn btn-primary zindex">
-							            <i class="bi bi-search"></i>
-							        </button>
-							    </form>
-							</div>
-			            </div>
-			        </div>
-			    </header>
-			</div>
-		</div>
+		<div class="container-lg">
+			<div id="header_area" class="row d-flex justify-content-end align-items-center pt-5">
+                <!-- 메인 로고 -->
+                <div id="main_logo" class="col-6">
+                    <h1>
+                        <a href="#" class="d-flex align-items-center justify-content-center">
+                            <img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png" width="250" height="100" alt="이미지를 로드할 수 없습니다">
+                        </a>
+                    </h1>
+                </div>
+				<!-- 검색바 -->
+				<div id="search_bar" class="col-3">
+					<form method="get" action="#" class="d-flex flex-row align-items-center">
+						<div id="search_input">
+							<input type="search" class="form-control" placeholder="Search...">
+						</div>
+						<button id="search_btn" type="submit" class="btn">
+							<i class="bi bi-search"></i>
+						</button>
+					</form>
+				</div>
+           </div>
+       </div>
 	</body>
 </html>
