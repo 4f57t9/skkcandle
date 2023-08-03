@@ -13,7 +13,7 @@ import com.skkcandle.service.ReviewService;
 public class homeController {
 	
 	@Resource
-	ReviewService reviewService;
+	private ReviewService reviewService;
 	
 	@RequestMapping("/")
 	public String index() {
