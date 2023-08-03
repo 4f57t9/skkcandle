@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="com.skkCandle.dao.CartDao">
+<!-- 장바구니에 담기 -->
+    <insert id="insert">
+        insert into cart (cart_id, userid, product_id, amount)
+        values 
+          (seq_cart.nextval, #{userid}, #{product_id}, #{amount} )
+ 
+	<!-- 장바구니 담기 버튼을 누를때 실행되는 쿼리문
+	cart_id와 userid, product_id, amount 값을 저장한다.
+	cart_id는 하나씩 증가되어야하기때문에 시퀀스값으로 지정한다. -->
+
+    </insert>
+    
+      <select id="listCart" parameterType="int" resultType="cart">  
+	 select cartid, productid, userid, count
+	      from cart
+	      where cartid = #{cartid}
+	      
+   </select>
+    
+</mapper>

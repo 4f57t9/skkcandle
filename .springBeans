@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.11.201912160804-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/main/resources/mybatis/mapper/cart.xml</config>
+	</configs>
+	<autoconfigs>
+		<config>src/main/resources/spring/dispatcher/interceptor.xml</config>
+		<config>src/main/resources/spring/dispatcher/properties.xml</config>
+		<config>src/main/resources/spring/root/datasource.xml</config>
+		<config>src/main/resources/spring/dispatcher/static-resource.xml</config>
+		<config>src/main/resources/spring/dispatcher/aop.xml</config>
+		<config>src/main/resources/spring/root/properties.xml</config>
+		<config>src/main/resources/spring/root/component-scan.xml</config>
+		<config>src/main/resources/spring/dispatcher/multipart-resolver.xml</config>
+		<config>src/main/resources/spring/dispatcher/component-scan.xml</config>
+		<config>src/main/resources/spring/root/mybatis.xml</config>
+		<config>src/main/resources/spring/dispatcher/view-resolve.xml</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

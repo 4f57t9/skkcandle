@@ -151,8 +151,16 @@ header{
     position: relative;
 }
  
- .option-item-info span {
+ .arrive-date {
     color: #00891a;
+}
+
+.delivery-condition {
+    letter-spacing: normal;
+    font-size: 12px;
+    color: #888;
+    margin-left: 5px;
+    position: relative;
 }
  
  .badge-list .badge-item {
@@ -264,7 +272,7 @@ header{
     color: #888;
 }
 
-.selected-delete, .selected-soldout-delete {
+.selected-delete, .all-delete {
     display: inline-block;
     margin-left: 10px;
     padding: 5px 6px;
@@ -382,6 +390,56 @@ header{
     position: relative;
 }
 
+.cart-no-item {
+    width: 896px;
+    border-left: 0;
+    border-right: 0;
+    padding: 60px 0;
+    color: #898989;
+    text-align: center;
+}
 
+.today-porduct {
+ 	position: relative;
+    width: 896px;
+    height: 184px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: url(//img1a.coupangcdn.com/image/static/product/cart/img_nonebasket4.jpg) no-repeat;
+}
+
+
+
+/*레이어 팝업*/
+
+/*
+.lack-layer.loyalty-registry-layer {
+    padding: 40px 24px 24px;
+}
+
+.lack-layer {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    padding: 41px 25px 42px;
+    border: 1px solid #000;
+    background: #fff;
+    z-index: 10000;
+}
+
+.lack-layer.loyalty-registry-layer .add-rocket-item {
+    padding: 0;
+    height: auto;
+    line-height: inherit;
+    border: 0;
+    color: #346aff;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+}
+*/
 
 

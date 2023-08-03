@@ -14,10 +14,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 	
-		<script src="cart.js"></script>
+		<script src="resouces/js/cart.js"></script>
 	</head>
 		<!-- External CSS -->
-		<link rel = "stylesheet" href ="cart.css"/>
+		<link rel = "stylesheet" href ="resources/css/cart.css"/>
 		
 	<body>
 		<div class="wrap">
@@ -32,26 +32,6 @@
 			</section>
 			<div class="cartContent">
         <table class="cartTable">
-       <!--     <colgroup>
-                <col width = "50" />
-                <col width = "80" />
-                <col width = "*"  />
-                <col width = "90" />
-                <col width = "90" />
-            </colgroup>
-            <thead>             
-               <tr class="head">
-                <th scope="col" class="all-select-event">
-                	<label>
-                		<input type= "checkbox" class="cboxAll">
-                		<span>&nbsp;&nbsp;전체선택</span>
-                	</label>
-                </th>
-                <th scope="colgroup" id="th-product-box" colspan="2">상품정보</th>
-                <th scope="col" id="th-unit-total-price">상품금액</th>
-                <th scope="col" id="th-delivery-fee">배송비</th>
-               </tr>
-            </thead> --> 
             <tbody id="cartTable-sku">
             	<tr>
             		<td colspan="5" class="cart-bundle-title">
@@ -74,9 +54,14 @@
             	</td>
             	<td class="product-box">
             		<div class="product-name-part">
-            			<a href="//www.coupang.com/vp/products/7055315061?vendorItemId=73515634019" class="product-name moveProduct modify-color">
-            			코코도르 아로마 필라 캔들 대 480g, 잉글리쉬페어프리, 3개
-            			</a>
+            			<c:forEach var="cart" items="${carts}">
+            				<tr>
+            					<td>${cart.cartId}</td>
+            					<td>${cart.productId}</td>
+								<td>${cart.userId}</td>
+								<td>${cart.count}</td>            				
+            				</tr>
+            			</c:forEach>	
             		</div>
             		<div class="option-item-info">
                     	<span class="arrive-date" style="display: inline-block;">
@@ -98,14 +83,6 @@
 						 </span>
 						<input type="number" class="edt-qty" value="0" min="0">
 					</span>	
-				</div> 		
-						<div class="badge-item option-benefit">
-		             		<span class="promo-cash-benefit ">
-		                		<i class="promo-cash-benefit__icon"></i>
-		                		<em class="promo-cash-benefit__text">최대 661원 적립</em>
-	           		  		</span>
-	   					</div>	
-	   					
 				</td>
 				
 					
