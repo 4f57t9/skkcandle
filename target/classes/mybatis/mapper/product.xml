@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skkcandle.dao.ProductDao">		
+	
+	<select id="detailproduct" parameterType="int" resultType="product">  
+	  select productid, productname, productprice, productstock, productmaker, productimage
+	      from product
+	      where productid = #{productid}
+   </select>
+</mapper>

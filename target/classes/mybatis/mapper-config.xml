@@ -6,5 +6,7 @@
 	<typeAliases>
 		<typeAlias alias="Review" type="com.skkcandle.dto.Review"/>
 		<typeAlias alias="User" type="com.skkcandle.dto.User"/>
+		<typeAlias alias="Cart" type="com.skkcandle.dto.Cart"/>
+		<typeAlias alias="Product" type="com.skkcandle.dto.Product"/>
 	</typeAliases>
 </configuration>
