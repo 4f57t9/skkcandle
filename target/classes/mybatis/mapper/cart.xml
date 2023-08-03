@@ -16,11 +16,11 @@
 
     </insert>
     
-      <select id="listCart" parameterType="int" resultType="cart">  
+     <!--  <select id="listCart" parameterType="int" resultType="cart">  
 	 select cartid, productid, userid, count
 	      from cart
 	      where cartid = #{cartid}
 	      
-   </select>
+   </select> -->
     
 </mapper>
