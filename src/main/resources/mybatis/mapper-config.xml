@@ -4,6 +4,6 @@
   "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias alias="Member" type="com.skkcandle.dto.memberDto"/>
+		<typeAlias alias="Review" type="com.skkcandle.dto.Review"/>
 	</typeAliases>
 </configuration>
