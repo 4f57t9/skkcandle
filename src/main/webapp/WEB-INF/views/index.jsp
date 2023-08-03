@@ -18,7 +18,7 @@
       	<input type="number" id="userId" name="userId">
       	<input type="text" id="reviewTitle" name="reviewTitle">
       	<input type="text" id="reviewContent" name="reviewContent">
-      	<button > 넣기</button>
+      	<button > 넣기 수정하기</button>
       </form>
       
       <%@include file ="mainPage.jsp" %>
