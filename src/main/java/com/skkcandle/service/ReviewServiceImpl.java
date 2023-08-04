@@ -18,6 +18,6 @@ public class ReviewServiceImpl implements ReviewService{
 	public void writeReview(Review review) {
 		log.info("review: " + review);
 		
-		reviewDao.insert(review);
+		reviewDao.select(review);
 	}
 }

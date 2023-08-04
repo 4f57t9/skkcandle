@@ -291,8 +291,7 @@
             margin: 0 auto;
 		}
 		
-		/*상품정보*/
-		
+		/*상품정보란*/
         .product{
             display: flex;
             flex-direction: row;
@@ -300,6 +299,7 @@
 		    width: 1320px;
 		    margin: 0;
             padding: 0;
+	    	border: 5px solid red;
         }
         
         /*별점*/
@@ -311,10 +311,17 @@
         
         /*상품의 이미지*/
         
+        .prod-image_detail{
+            position: relative;
+        	float: Left;
+        	width: 3000px;
+        	display: inline-block;   	
+        }
+        
         .prod_image{
         	position: relative;
         	float: left;
-        	width : 490px;
+        	width : 550px;
         	text-align: center;
         	display: inline-block;
         	
@@ -890,44 +897,7 @@
 			    font-size: 12px;
 			}	
 		
-		
-		/*고리고 골랐어요*/
-		.banner-title {
-				font-size: 18px;
-			    font-weight: 700;
-			    color: #000;
-			    line-height: 20px;
-		}
-		
-		.bottom-banner>a.banner-link {
-			    position: relative;
-			    display: block;
-			    height: 160px;
-			    background-color: #f4f6f8;
-			    border-radius: 12px;
-			    cursor: pointer;
-			    padding: 8px 50px 8px 152px;
-		}
-		.sdp-bottom-banner-thumb > img{
-			display: block;
-    		width: 15%;
-    		float:left;
-    		margin-right: 800px;
-		}
-		
-		.item-link-button > button{
-			float: right;
-			margin-top: 10px;
-			border: 0;
-  			background-color: transparent;
-		}
-	
-		
-        .bottom-banner{
-		/*    border:5px solid black; */
-		    width: 1320px;
-        }
-        
+
         
         
      

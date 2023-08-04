@@ -6,5 +6,5 @@ import com.skkcandle.dto.Review;
 
 @Mapper
 public interface reviewDao {
-	public void insert(Review review);
+	public void select(Review review);
 }

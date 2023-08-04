@@ -140,7 +140,10 @@
 		 
 	    <div class="prod-buy">
 	     	<div class="product_name"> 
-	     		<h2>${product.productname}</h2> <!-- 상품 이룸 들어가는 곳 -->
+	     		<h2>${detailproduct.productName}</h2> <!-- 상품 이룸 들어가는 곳 -->
+	     		<h2>${detailproduct.productId}</h2>
+	     		<h2>${detailproduct.productPrice}</h2>
+	     		<h2>${detailproduct.productStock}</h2>	     		
 	     	</div>
 	     	
 	     	<!-- 별점 -->
@@ -156,7 +159,7 @@
 	     	
 		 	<hr>
 			<div class="price">
-				${product.productrpeice}원 <!-- 상품 가격 들어가는 곳 -->
+				${detailproduct.productPrice}원 <!-- 상품 가격 들어가는 곳 -->
 			</div>	
 			<hr>
         	<!-- 장바구니 구매하기 -->
@@ -324,19 +327,7 @@
 	    			<input class="sdp-review_search" placeholder="상품평을 검색해 보세요." maxlength="30">
 	    		</div>
 	    	
-	    	
-	    	<!-- 후기 및 판매자 정보 -->
-	    	
-	    	<article class="sdp-review_article-list">
-		    	<div class="sdp-review_article_list_info">
-		    	<br>
-		    	<div class="sdp-review_article_list_info_profile"><img src="https://img1a.coupangcdn.com/image/productreview/web/pdp/profile/img-profile-empty.png"></div>  	
-		    	<div class="sdp-review_article_list_info_user">박*훈&nbsp;</div>
-		    	<div class="sdp-review_article_list_info_product-info">2023.05.12</div>
-		    	<div class="sdp-review_article_list_info_product-info_seller_name">판매자: 쿠팡(주)</div>
-	    		<div class="sdp-review_article_list_info_product-info_product-info_name">캔들백화점 스퀘어 크리스탈 루시드 캔들워머 로즈골드화이트+소이 캔들 280g세트</div>
-	    	</article>
-	    </section>	
+	    	</section>	
 	    	<!-- 상품문의 주의란 -->
 	    	
 	    <div class="prod-inquiry-list">

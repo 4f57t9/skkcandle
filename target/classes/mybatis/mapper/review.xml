@@ -5,4 +5,5 @@
 		insert into review (reviewId, productId, userId, reviewTitle, reviewDate, ratingScore, reviewContent)
 		values(#{reviewId}, #{productId}, #{userId}, #{reviewTitle}, sysdate, 0, #{reviewContent})
 	</insert>
+	
 </mapper>

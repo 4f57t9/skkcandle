@@ -3,28 +3,34 @@ package com.skkcandle.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.skkcandle.dto.Product;
 import com.skkcandle.service.ProductService;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Controller
-@RequestMapping("/productDeatil")
+//@RequestMapping("/productDetail")
 public class productController {
 	
-	   @Autowired
-	   private ProductService ProductService;
+    @Autowired
+    private ProductService ProductService;
 	   
-	@RequestMapping("")
+	@RequestMapping("/productDetail")
 	
-	public String detailProduct(int productid, Model model) {
-		
-		Product product = ProductService.detailProdcut(productid);
+	public String detailProduct( Model model) {
+		int productId = 1;
+		log.info("제품번호" + productId);
+		Product product = ProductService.detailProduct(productId);
 		model.addAttribute("detailproduct", product);
 		
 		return "/productDetail/detailView";
 	}
+	
+
 	
 	/*
 	

@@ -9,12 +9,12 @@ import com.skkcandle.dto.Product;
 @Service
 public class ProductServiceImpl implements ProductService {
 	
-	 @Autowired
-	   private productDao productDao; //생성자 주입방식(생성자에 @Autowired 를 붙혀서 컨테이너에서 주입 당한다.)
-
+	@Autowired
+    private productDao productDao; //생성자 주입방식(생성자에 @Autowired 를 붙혀서 컨테이너에서 주입 당한다.)
+ 
 	@Override
-	public Product detailProdcut(int productid) {
-		Product detailProduct = productDao.selectDetailProdcut(productid);
+	public Product detailProduct(int productId) {
+		Product detailProduct = productDao.selectDetailProduct(productId);
 		return detailProduct;
 	}
 

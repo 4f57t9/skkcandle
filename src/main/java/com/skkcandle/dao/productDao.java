@@ -7,6 +7,6 @@ import com.skkcandle.dto.Product;
 @Mapper
 public interface productDao {
 	
-	public Product selectDetailProdcut(int productid);	
+	public Product selectDetailProduct(int productId);	
 
 }
