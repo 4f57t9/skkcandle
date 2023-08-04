@@ -12,12 +12,12 @@ function eventInit() {
    
    //전체선택 및 해제 
 function checkAll() {
-   if($(event.target).is(':aria-checked')) { //boolean 타입을 반환
-      $("input[name=cbox]").prop("aria-checked", true); //true면 체크
-      $(".chk_checkall").prop("aria-checked", true);
+   if($(event.target).is(':checked')) { //boolean 타입을 반환
+      $("input[name=cbox]").prop("checked", true); //true면 체크
+      $("#chk_checkall").prop("checked", true);
    } else {
-      $("input[name=cbox]").prop("aria-checked", false); //false 면 체크 해제
-      $(".chk_checkall").prop("aria-checked", false);
+      $("input[name=cbox]").prop("checked", false); //false 면 체크 해제
+      $("#chk_checkall").prop("checked", false);
    }
    
    $(document).on("click", "input:checkbox[name=cbox]", function(e) {
@@ -37,9 +37,9 @@ function checkAll() {
       console.log ("chksChecked: " + chksChecked)
       
       if(chks.length == chksChecked){
-         $(".chk_checkall").prop("aria-checked", true);
+         $("#chk_checkall").prop("checked", true);
       }else{
-         $(".chk_checkall").prop("aria-checked",false);
+         $("#chk_checkall").prop("checked",false);
       }
    });
 }
