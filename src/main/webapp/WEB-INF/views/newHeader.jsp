@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 		<link rel="icon" href="" type="image/x-icon" />
 		<title>skkcandle</title>
 
@@ -19,13 +19,13 @@
 		<script src="${pageContext.request.contextPath}/resources/js/newHeader.js"></script>
 	</head>
 	<body>
-		<div class="container-lg">
+		<div class="container">
 			<div id="header_area" class="row d-flex justify-content-end align-items-center pt-5">
                 <!-- 메인 로고 -->
                 <div id="main_logo" class="col-6">
                     <h1>
                         <a href="#" class="d-flex align-items-center justify-content-center">
-                            <img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png" width="250" height="100" alt="이미지를 로드할 수 없습니다">
+                            <img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png" alt="이미지를 로드할 수 없습니다">
                         </a>
                     </h1>
                 </div>
@@ -36,7 +36,7 @@
 							<input type="search" class="form-control" placeholder="Search...">
 						</div>
 						<button id="search_btn" type="submit" class="btn">
-							<i class="bi bi-search"></i>
+							<i class="bi bi-search" style="color: white;"></i>
 						</button>
 					</form>
 				</div>

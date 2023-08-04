@@ -17,12 +17,17 @@ public class homeController {
 	
 	@RequestMapping("/")
 	public String index() {
-		return "newHeader";
+		return "/header/navHeader";
 	}
 	
 	@RequestMapping("/header")
 	public String header() {
 		return "header";
+	}
+	
+	@RequestMapping("/newHeader")
+	public String newHeader() {
+		return "newHeader";
 	}
 	
 	@PostMapping("/writeReview")

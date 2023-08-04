@@ -10,6 +10,11 @@
     left: -40px;
 }
 
+#main_logo img {
+	max-width: 200px;
+	max-height: 100px;
+}
+
 #search_btn i {
 	color: #fff;
 }
