@@ -31,17 +31,24 @@ public class productController {
 		Product product = ProductService.detailProduct(productId);
 		model.addAttribute("detailproduct", product);
 		
+		List<Review> review = ReviewService.selectReview(productId);
+		model.addAttribute("productviews", review);
+			
+		int reviewNum = ReviewService.getTotalReviewNum(productId);
+		model.addAttribute("totalReviewNum", reviewNum);
+
 		return "/productDetail/detailView";
+		
 	}
 	
-	@RequestMapping("/productDetail2")
+/*	@RequestMapping("/productDetail")
 	public String prodcutReview(Model model) {
 		int productId = 1;
 		List<Review> review = ReviewService.selectReview(productId);
 		model.addAttribute("productviews", review);
 		
 		return "/productDetail/detailView";
-	}
+	}*/
 
 	
 	/*

@@ -12,6 +12,10 @@
 		where productId = #{productId}
 	</select>
 	
+	<select id="count" resultType="int">
+		select count(*) from review
+		where productId = #{productId}	
+	</select>
 	
 </mapper> <!-- 리뷰 작업으로 인한 주석처리 -->
 

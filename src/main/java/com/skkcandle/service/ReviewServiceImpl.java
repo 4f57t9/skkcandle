@@ -28,4 +28,10 @@ public class ReviewServiceImpl implements ReviewService{
 	List<Review> productReview = reviewDao.selectReview(productId);			
 		return productReview;
 	}
+
+	@Override
+	public int getTotalReviewNum(int productId) {
+	   int totalReviewNum = reviewDao.count(productId);
+	   return totalReviewNum;
+	}
 }

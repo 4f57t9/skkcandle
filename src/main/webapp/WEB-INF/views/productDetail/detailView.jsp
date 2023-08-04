@@ -48,10 +48,7 @@
 	     		<h2>${detailproduct.productId}</h2>
 	     		<h2>${detailproduct.productPrice}</h2>
 	     		<h2>${detailproduct.productStock}</h2>
-	     		<h2>${productview.reviewTitle}</h2>
-	     		<h2>${productview.reviewContent}</h2>
-	     		<h2>${productview.ratingScore}</h2>
-	     		     		
+	
 	     	</div>
 	     	<table>
 		     	<c:forEach var="review" items="${productviews}">
@@ -70,7 +67,7 @@
 		 			<span style="width: 93%"></span> 
 		 		</div>  
 		 		<div class="review_count">
-		 			5개의 상품평 <!-- 상품평 갯수 들어가는 곳 -->
+		 			${totalReviewNum}개의 상품평 <!-- 상품평 갯수 들어가는 곳 -->
 		 		</div> 
 	     	</div>
 	     	
