@@ -19,9 +19,9 @@ public class User {
 	private String userGrade;
 	
 	//방법 2를 쓴다.
-	private MultipartFile userImage;
+	/*private MultipartFile userImage;
 	private String userImageoname;
 	private String userImagesname;
 	
-	private byte[] userImagedata;
+	private byte[] userImagedata;*/
 }

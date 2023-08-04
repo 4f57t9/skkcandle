@@ -6,6 +6,6 @@ import com.skkcandle.dto.User;
 
 @Mapper
 public interface userDao {
-	public User select(int userId);
+	public User select(String userEmail);
 	public void insert(User user);
 }

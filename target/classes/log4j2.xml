@@ -7,7 +7,7 @@
   </Appenders>
   
   <Loggers>
-    <Logger name="com.mycompany.springwebapp" level="info" additivity="false">
+    <Logger name="com.skkcandle" level="info" additivity="false">
       <AppenderRef ref="Out"/>
     </Logger>
     <!-- Webapplication이 DB로 보내는 SQL문을 로그로 출력하기 위한 설정 -->
