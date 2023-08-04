@@ -30,12 +30,12 @@ public class homeController {
 		return "newHeader";
 	}
 	
-	@PostMapping("/writeReview")
+	/*@PostMapping("/writeReview") //review 수정중
 	public String writeReview(Review review) {
 		
 		
 		reviewService.writeReview(review);
 		
 		return "redirect:/";
-	}
+	}*/
 }

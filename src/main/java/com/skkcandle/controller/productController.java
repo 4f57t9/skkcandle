@@ -1,13 +1,16 @@
 package com.skkcandle.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.skkcandle.dto.Product;
+import com.skkcandle.dto.Review;
 import com.skkcandle.service.ProductService;
+import com.skkcandle.service.ReviewService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,10 +21,11 @@ public class productController {
 	
     @Autowired
     private ProductService ProductService;
+    @Autowired
+    private ReviewService ReviewService;
 	   
 	@RequestMapping("/productDetail")
-	
-	public String detailProduct( Model model) {
+	public String detailProduct(Model model) {
 		int productId = 1;
 		log.info("제품번호" + productId);
 		Product product = ProductService.detailProduct(productId);
@@ -30,6 +34,14 @@ public class productController {
 		return "/productDetail/detailView";
 	}
 	
+	@RequestMapping("/productDetail2")
+	public String prodcutReview(Model model) {
+		int productId = 1;
+		List<Review> review = ReviewService.selectReview(productId);
+		model.addAttribute("productviews", review);
+		
+		return "/productDetail/detailView";
+	}
 
 	
 	/*

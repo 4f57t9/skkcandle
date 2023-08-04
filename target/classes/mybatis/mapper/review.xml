@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.skkcandle.dao.reviewDao">
-	<insert id="insert" parameterType="Review">
+	<!-- <insert id="insert" parameterType="Review">
 		insert into review (reviewId, productId, userId, reviewTitle, reviewDate, ratingScore, reviewContent)
 		values(#{reviewId}, #{productId}, #{userId}, #{reviewTitle}, sysdate, 0, #{reviewContent})
-	</insert>
+	</insert> -->
 	
-</mapper>
+	<select id="selectReview" parameterType="int" resultType="Review">
+		select reviewId, productId, userId, reviewTitle, reviewDate, ratingScore, reviewContent
+		from review
+		where productId = #{productId}
+	</select>
+	
+	
+</mapper> <!-- 리뷰 작업으로 인한 주석처리 -->
+
+
+
+

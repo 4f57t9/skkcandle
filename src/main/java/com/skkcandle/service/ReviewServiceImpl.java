@@ -1,5 +1,7 @@
 package com.skkcandle.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,10 +16,16 @@ public class ReviewServiceImpl implements ReviewService{
 	@Autowired
 	private reviewDao reviewDao;
 
-	@Override
+	/*@Override
 	public void writeReview(Review review) {
 		log.info("review: " + review);
 		
-		reviewDao.select(review);
+		reviewDao.selectReview(review);
+	}*/
+
+	@Override
+	public List<Review> selectReview(int productId) {
+	List<Review> productReview = reviewDao.selectReview(productId);			
+		return productReview;
 	}
 }
