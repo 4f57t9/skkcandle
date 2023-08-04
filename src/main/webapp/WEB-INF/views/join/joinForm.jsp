@@ -106,8 +106,8 @@
 				<div id="join_terms_chkAll">
 				    <div id="join_terms">
 				        <input type="checkbox" id="chk_checkall" aria-hidden="true">
-				        <label for="chk_checkall" role="checkbox" aria-label="모두 확인하였으며 동의합니다" aria-checked="false">
-				            <i aria-hidden="true" class="icon_chk"></i>
+				        <!-- <label for="chk_checkall" role="checkbox" aria-label="모두 확인하였으며 동의합니다" aria-checked="false">
+				            <i aria-hidden="true" class="icon_chk"></i> -->
 				            <span aria-hidden="true">모두 확인하였으며 동의합니다.</span>
 				        </label>
 				    </div>
@@ -119,66 +119,31 @@
 				<%-- 약관 동의 목록 --%>
 				<ul class="join_terms_other">
 			        <div class="join_terms_frame">
-				        <input type="checkbox" id="chk_join-terms-fourteen" name="cbox">
-				        <label for="chk_join-terms-fourteen" role="checkbox" aria-label="만 14세 이상입니다" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
+				        <input type="checkbox" id="chk_join-terms-fourteen" name="cbox" >
+				        <!-- <label for="chk_join-terms-fourteen" role="checkbox" aria-label="만 14세 이상입니다" aria-checked="false">
+				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 만 14세 이상입니다</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_join-terms-commerce" class="join_terms_frame">
 				        <input type="checkbox" id="chk_join-terms-commerce" name="cbox">
-				        <label for="chk_join-terms-commerce" role="checkbox" aria-label="전자금융거래 이용약관 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
+				       <!--  <label for="chk_join-terms-commerce" role="checkbox" aria-label="전자금융거래 이용약관 동의" aria-checked="false">
+				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 전자금융거래 이용약관 동의</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_join-terms-privacy-collect-use" class="join_terms_frame">
 				        <input type="checkbox" id="chk_join-terms-privacy-collect-use" name="cbox">
-				        <label for="chk_join-terms-privacy-collect-use" role="checkbox" aria-label="개인정보 수집 및 이용 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
+				        <!-- <label for="chk_join-terms-privacy-collect-use" role="checkbox" aria-label="개인정보 수집 및 이용 동의" aria-checked="false">
+				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 개인정보 수집 및 이용 동의</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_agree-to-collect-third-part-information" class="join_terms_frame">
 				        <input type="checkbox" id="chk_agree-to-collect-third-part-information" name="cbox">
-				        <label for="chk_agree-to-collect-third-part-information" role="checkbox" aria-label="개인정보 제3자 제공 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
+				        <!-- <label for="chk_agree-to-collect-third-part-information" role="checkbox" aria-label="개인정보 제3자 제공 동의" aria-checked="false">
+				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 개인정보 제3자 제공 동의</span>
-				        </label>
-					</div>
-					<div id="c-checkbox-item_POLICY_AGREE_COLLECT" class="join_terms_frame">
-		      			<input type="checkbox" id="chk_POLICY_AGREE_COLLECT" name="cbox">
-				        <label for="chk_POLICY_AGREE_COLLECT" role="checkbox" aria-label="마케팅 목적의 개인정보 수집 및 이용 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
-				            <span aria-hidden="true">[선택] 마케팅 목적의 개인정보 수집 및 이용 동의</span>
-				        </label>				
-					</div>
-					<div id="c-checkbox-item_agree-to-receive-ads" class="join_terms_frame">
-				        <input type="checkbox" id="chk_agree-to-receive-ads" name="cbox">
-				        <label for="chk_agree-to-receive-ads" role="checkbox" aria-label="광고성 정보 수신 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
-				            <span aria-hidden="true">[선택] 광고성 정보 수신 동의</span>
-				        </label>							
-					</div>
-					<div id="c-checkbox-item_POLICY_AGREE_EMAIL" class="join_terms_frame marketing_consent">
-				        <input type="checkbox" id="chk_POLICY_AGREE_EMAIL" name="cbox">
-				        <label for="chk_POLICY_AGREE_EMAIL" role="checkbox" aria-label="이메일 수신 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
-				            <span aria-hidden="true">[선택] 이메일 수신 동의</span>
-				        </label>								
-					</div>
-					<div id="c-checkbox-item_POLICY_AGREE_SMS" class="join_terms_frame marketing_consent">
-				        <input type="checkbox" id="chk_POLICY_AGREE_SMS" name="cbox">
-				        <label for="chk_POLICY_AGREE_SMS" role="checkbox" aria-label="SMS, SNS 수신 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
-				            <span aria-hidden="true">[선택] SMS, SNS 수신 동의</span>
-				        </label>	
-					</div>
-					<div class="join_terms_frame marketing_consent">
-				        <input type="checkbox" id="chk_POLICY_AGREE_MARKETING_PUSH" name="cbox">
-				        <label for="chk_POLICY_AGREE_MARKETING_PUSH" role="checkbox" aria-label="앱 푸시 수신 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
-				            <span aria-hidden="true">[선택] 앱 푸시 수신 동의</span>
 				        </label>
 					</div>
    				 </ul>
