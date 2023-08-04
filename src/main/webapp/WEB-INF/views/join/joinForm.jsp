@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="http://www.google.com/s2/favicons?domain=https://login.coupang.com/login/memberJoinFrm.pang" type="image/x-ico">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/joinForm.css">
+		<script src="${pageContext.request.contextPath}/resources/js/joinForm.js"></script>
 		<title>회원가입</title>
 	</head>
 	<body>
