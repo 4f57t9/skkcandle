@@ -17,7 +17,7 @@ public class homeController {
 	
 	@RequestMapping("/")
 	public String index() {
-		return "/header/navHeader";
+		return "index";
 	}
 	
 	@RequestMapping("/header")
@@ -29,6 +29,23 @@ public class homeController {
 	public String newHeader() {
 		return "newHeader";
 	}
+	
+	@RequestMapping("/navHeader")
+	public String navHeader() {
+		return "/header/navHeader";
+	}
+	
+	@RequestMapping("/mainPage")
+	public String mainPage() {
+		return "/mainPage/mainPage";
+	}
+	
+	@RequestMapping("/footer")
+	public String footer() {
+		return "/footer/footer";
+	}
+	
+	
 	
 	@PostMapping("/writeReview")
 	public String writeReview(Review review) {

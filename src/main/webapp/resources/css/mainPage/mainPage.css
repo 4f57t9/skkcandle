@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+a {
+	text-decoration: none;
+}
+
+#page {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.product-entry {
+	height: 100%;
+}
+
+.desc {
+	padding: 1.5em;
+}
+
+.price {
+	font-size: 18px;
+	color: #000;
+	font-weight: 400;
+}
+
+.desc h2 a {
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.prod-img {
+	background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
