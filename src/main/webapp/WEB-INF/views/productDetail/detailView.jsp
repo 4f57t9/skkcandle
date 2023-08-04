@@ -21,7 +21,7 @@
 		<link rel = "stylesheet" href ="resources/css/detailView.css"/>
 		<link rel = "stylesheet" href ="resources/css/header/navHeader.css"/>
 	<body>
-	
+	 
 	<div class="container">	
 	
 		<!-- 상품의 썸네일 & 상세사진 -->
