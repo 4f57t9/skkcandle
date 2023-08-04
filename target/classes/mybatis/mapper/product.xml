@@ -5,6 +5,6 @@
 	<select id="detailproduct" parameterType="int" resultType="product">  
 	  select productid, productname, productprice, productstock, productmaker, productimage
 	      from product
-	      where productid = #{productid}
+	      where product = #{productid}
    </select>
 </mapper>

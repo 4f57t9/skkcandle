@@ -1,18 +1,28 @@
 package com.skkcandle.controller;
 
-import java.util.Base64;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.skkcandle.dto.Product;
+import com.skkcandle.service.ProductService;
 
 
 @Controller
 @RequestMapping("/productDeatil")
 public class productController {
+	
+	   @Autowired
+	   private ProductService ProductService;
+	   
 	@RequestMapping("")
-	public String cart() {
+	
+	public String detailProduct(int productid, Model model) {
+		
+		Product product = ProductService.detailProdcut(productid);
+		model.addAttribute("detailproduct", product);
+		
 		return "/productDetail/detailView";
 	}
 	

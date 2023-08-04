@@ -1,5 +1,12 @@
 package com.skkcandle.dao;
 
-public class productDao {
+import org.apache.ibatis.annotations.Mapper;
+
+import com.skkcandle.dto.Product;
+
+@Mapper
+public interface productDao {
+	
+	public Product selectDetailProdcut(int productid);	
 
 }
