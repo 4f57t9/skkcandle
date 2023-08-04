@@ -6,13 +6,13 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="http://www.google.com/s2/favicons?domain=https://login.coupang.com/login/memberJoinFrm.pang" type="image/x-ico">
-		<link rel="stylesheet" href="joinForm.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/joinForm.css">
 		<title>회원가입</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header class="join_header">
-				<img src="https://static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png"/>
+				<img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png"/>
 			</header>
 
 			<section id="join_section">
@@ -29,7 +29,7 @@
 								</span>
 								<span class="join_input_box">
 									<input type="email" class="join_input_content" id="userEmail" name="userEmail" 
-										placeholder="아이디(이메일)" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '아이디(이메일)'"/>
+										placeholder="이메일" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '이메일'"/>
 								</span>
 							</label>
 						</div>
@@ -81,6 +81,17 @@
 								</span>
 							</label>
 						</div>
+						<div class="join_input_userInfo">
+							<label for="userAddress">
+								<span class="join_input_icon_box">
+									<i class="join_input_icon icon_email"></i>
+								</span>
+								<span class="join_input_box">
+									<input type="text" class="join_input_content" id="userAddress" name="userAddress" 
+										placeholder="주소" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '주소'"/>
+								</span>
+							</label>
+						</div>
 					</form>
 				</div>
 				
@@ -105,13 +116,6 @@
 				        <label for="chk_join-terms-fourteen" role="checkbox" aria-label="만 14세 이상입니다" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[필수] 만 14세 이상입니다</span>
-				        </label>
-					</div>
-					<div class="join_terms_frame">
-				        <input type="checkbox" id="chk_join-terms-service">
-				        <label for="chk_join-terms-service" role="checkbox" aria-label="쿠팡 이용약관 동의" aria-checked="false">
-				            <i aria-hidden="true" class="icon-chk"></i>
-				            <span aria-hidden="true">[필수] 쿠팡 이용약관 동의</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_join-terms-commerce" class="join_terms_frame">
@@ -180,16 +184,16 @@
 				</div>
 				
 				<%-- tip 메세지 --%>
-				<div id="join_helpMessage">
+				<!-- <div id="join_helpMessage">
 					<p>법인 고객이신가요?</p>
 					<p>사업자 회원으로 전용 특가 혜택을 누려보세요.</p>
 					<a href="https://login.coupang.com/corporation/member/landing-page">쿠팡비즈 간편가입</a>			
-				</div>
+				</div> -->
 			</section>
 			
 			<%-- 푸터영역 --%>
 			<footer id="join_footer">
-				<p>©Coupang Corp. All rights reserved.</p>
+				<p>©SkksCandle Corp. All rights reserved.</p>
 			</footer>
 		</div>
 	</body>

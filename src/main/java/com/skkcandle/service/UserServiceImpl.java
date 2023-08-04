@@ -16,4 +16,9 @@ public class UserServiceImpl implements UserService {
 		return userinfo;
 	}
 
+	@Override
+	public void join(User user) {
+		userDao.insert(user);
+	}
+
 }
