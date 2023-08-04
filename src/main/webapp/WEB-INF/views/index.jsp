@@ -24,7 +24,6 @@
 	      </form>
       </div>
       
-      
       <div>
 	      <%@include file ="mainPage/mainPage.jsp" %>      
       </div>
