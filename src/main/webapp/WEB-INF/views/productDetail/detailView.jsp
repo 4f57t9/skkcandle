@@ -53,14 +53,15 @@
 	     		<h2>${productview.ratingScore}</h2>
 	     		     		
 	     	</div>
-	     	
-	     	<c:forEach var="review" items="${productviews}">
-	            <tr>
-	               <td>${review.reviewTitle}</td>
-	               <td>${review.reviewContent}</td>
-	               <td>${review.ratingScore}</td>
-	            </tr>
-           </c:forEach>
+	     	<table>
+		     	<c:forEach var="review" items="${productviews}">
+		            <tr>
+		               <td>${review.reviewTitle}</td>
+		               <td>${review.reviewContent}</td>
+		               <td>${review.ratingScore}</td>
+		            </tr>
+	             </c:forEach>
+ 		     </table>   
 	     	
 	     	<!-- 별점 -->
 	     	

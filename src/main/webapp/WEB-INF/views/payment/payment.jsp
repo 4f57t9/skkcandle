@@ -35,7 +35,7 @@
 					</header>
 			</section>
 			
-			<hr>
+			<hr style="border-top:0; margin-top:3rem;">
 			
 			<!-- 바디 -->
 			<section class="d-flex-column mx-auto maincontainer" >
@@ -67,7 +67,9 @@
 							</tr>
 							<tr>
 								<th>배송주소</th>
-								<td>${userinfo.userAddress } <span style="margin-left: 10px;"><button id="transAddress" onclick="openAdress()"> 배송지변경</button></span></td>
+								<td><input type="text" placeholder=" ${userinfo.userAddress } " size=50 style="outline:none;">   <span style="margin-left: 10px;">
+								
+								<!-- <button id="transAddress" onclick="openAdress()"> 배송지변경</button> --></span></td>
 								
 							</tr>
 						</table>
@@ -129,15 +131,11 @@
 							<tr>
 								<th>결제 방법</th>
 								<td>
-								 <div class="payMethod">
+								 <div class="payMethod" style="pading-right:10px;">
 									<div id="L_account-transfer" class="payMethod-arrow">
 										<label><input id="account-transfer" class="cash payMethod"
 											type="radio" name="pay-method" value="계좌이체" checked="checked"> 계좌이체 </label></div>
 										
-									<div id="L_coupay-money" >
-										<label><input id="coupay-money" class="cash payMethod"
-											type="radio" name="pay-method" value="쿠페이머니"> 쿠페이 머니  </label></div>
-
 									<div id="L_credit-card">
 										<label><input
 											id="credit-card" class="no-cash payMethod" type="radio" name="pay-method"
@@ -191,7 +189,7 @@
 											</label>
 											
 											 <span style="padding-right:35px;"></span> <label style="font-weight: lighter"><input type="checkbox"
-													checked="checked"> 김시온님 명의 카드</label>
+													checked="checked"> ${userinfo.userName }님 명의 카드</label>
 											
 										</div>
 										<div style="border-top: 1px solid #e4e4e4; padding-top: 10px;"><label>

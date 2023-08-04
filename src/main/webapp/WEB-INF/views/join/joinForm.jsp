@@ -21,15 +21,15 @@
 				<%-- 사용자 정보 입력 --%>
 				<div id="join_input">
 					<%-- 이메일(아이디) --%>
-					<form id="join_input_form" method="post" action="">
+					<form id="join_input_form" method="post" action="join/register">
 						<div class="join_input_userInfo">
 							<label for="userEmail">
 								<span class="join_input_icon_box">
 									<i class="join_input_icon icon_email"></i>
 								</span>
 								<span class="join_input_box">
-									<input type="email" class="join_input_content" id="userEmail" name="userEmail" 
-										placeholder="이메일" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '이메일'"/>
+									<input type="email" class="join_input_content" id="userEmail" name="userEmail" value=""
+										placeholder="${register_msg}" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '${register_msg}'"/>
 								</span>
 							</label>
 						</div>
@@ -40,7 +40,7 @@
 									<i class="join_input_icon icon_password"></i>
 								</span>
 								<span class="join_input_box">
-									<input type="password" class="join_input_content" id="userPassword" name="userPassword" 
+									<input type="password" class="join_input_content" id="userPassword" name="userPassword" value="${user.userPassword }"
 										placeholder="비밀번호" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호'"/>
 								</span>
 							</label>
@@ -64,7 +64,7 @@
 									<i class="join_input_icon icon_name"></i>
 								</span>
 								<span class="join_input_box">
-									<input type="text" class="join_input_content" id="userName" name="userName" 
+									<input type="text" class="join_input_content" id="userName" name="userName" value="${user.userName }"
 										placeholder="이름" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '이름'"/>
 								</span>
 							</label>
@@ -76,7 +76,7 @@
 									<i class="join_input_icon icon_tel"></i>
 								</span>
 								<span class="join_input_box">
-									<input type="tel" class="join_input_content" id="userTel" name="userTel" 
+									<input type="text" class="join_input_content" id="userPhone" name="userPhone" value="${user.userPhone }"
 										placeholder="휴대폰 번호" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '휴대폰 번호'"/>
 								</span>
 							</label>
@@ -87,7 +87,7 @@
 									<i class="join_input_icon icon_email"></i>
 								</span>
 								<span class="join_input_box">
-									<input type="text" class="join_input_content" id="userAddress" name="userAddress" 
+									<input type="text" class="join_input_content" id="userAddress" name="userAddress" value="${user.userAddress }"
 										placeholder="주소" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = '주소'"/>
 								</span>
 							</label>
@@ -112,63 +112,63 @@
 				<%-- 약관 동의 목록 --%>
 				<ul class="join_terms_other">
 			        <div class="join_terms_frame">
-				        <input type="checkbox" id="chk_join-terms-fourteen">
+				        <input type="checkbox" id="chk_join-terms-fourteen" name="cbox">
 				        <label for="chk_join-terms-fourteen" role="checkbox" aria-label="만 14세 이상입니다" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[필수] 만 14세 이상입니다</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_join-terms-commerce" class="join_terms_frame">
-				        <input type="checkbox" id="chk_join-terms-commerce">
+				        <input type="checkbox" id="chk_join-terms-commerce" name="cbox">
 				        <label for="chk_join-terms-commerce" role="checkbox" aria-label="전자금융거래 이용약관 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[필수] 전자금융거래 이용약관 동의</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_join-terms-privacy-collect-use" class="join_terms_frame">
-				        <input type="checkbox" id="chk_join-terms-privacy-collect-use">
+				        <input type="checkbox" id="chk_join-terms-privacy-collect-use" name="cbox">
 				        <label for="chk_join-terms-privacy-collect-use" role="checkbox" aria-label="개인정보 수집 및 이용 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[필수] 개인정보 수집 및 이용 동의</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_agree-to-collect-third-part-information" class="join_terms_frame">
-				        <input type="checkbox" id="chk_agree-to-collect-third-part-information">
+				        <input type="checkbox" id="chk_agree-to-collect-third-part-information" name="cbox">
 				        <label for="chk_agree-to-collect-third-part-information" role="checkbox" aria-label="개인정보 제3자 제공 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[필수] 개인정보 제3자 제공 동의</span>
 				        </label>
 					</div>
 					<div id="c-checkbox-item_POLICY_AGREE_COLLECT" class="join_terms_frame">
-		      			<input type="checkbox" id="chk_POLICY_AGREE_COLLECT">
+		      			<input type="checkbox" id="chk_POLICY_AGREE_COLLECT" name="cbox">
 				        <label for="chk_POLICY_AGREE_COLLECT" role="checkbox" aria-label="마케팅 목적의 개인정보 수집 및 이용 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[선택] 마케팅 목적의 개인정보 수집 및 이용 동의</span>
 				        </label>				
 					</div>
 					<div id="c-checkbox-item_agree-to-receive-ads" class="join_terms_frame">
-				        <input type="checkbox" id="chk_agree-to-receive-ads">
+				        <input type="checkbox" id="chk_agree-to-receive-ads" name="cbox">
 				        <label for="chk_agree-to-receive-ads" role="checkbox" aria-label="광고성 정보 수신 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[선택] 광고성 정보 수신 동의</span>
 				        </label>							
 					</div>
 					<div id="c-checkbox-item_POLICY_AGREE_EMAIL" class="join_terms_frame marketing_consent">
-				        <input type="checkbox" id="chk_POLICY_AGREE_EMAIL">
+				        <input type="checkbox" id="chk_POLICY_AGREE_EMAIL" name="cbox">
 				        <label for="chk_POLICY_AGREE_EMAIL" role="checkbox" aria-label="이메일 수신 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[선택] 이메일 수신 동의</span>
 				        </label>								
 					</div>
 					<div id="c-checkbox-item_POLICY_AGREE_SMS" class="join_terms_frame marketing_consent">
-				        <input type="checkbox" id="chk_POLICY_AGREE_SMS">
+				        <input type="checkbox" id="chk_POLICY_AGREE_SMS" name="cbox">
 				        <label for="chk_POLICY_AGREE_SMS" role="checkbox" aria-label="SMS, SNS 수신 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[선택] SMS, SNS 수신 동의</span>
 				        </label>	
 					</div>
 					<div class="join_terms_frame marketing_consent">
-				        <input type="checkbox" id="chk_POLICY_AGREE_MARKETING_PUSH">
+				        <input type="checkbox" id="chk_POLICY_AGREE_MARKETING_PUSH" name="cbox">
 				        <label for="chk_POLICY_AGREE_MARKETING_PUSH" role="checkbox" aria-label="앱 푸시 수신 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i>
 				            <span aria-hidden="true">[선택] 앱 푸시 수신 동의</span>
@@ -178,7 +178,7 @@
    				 
 				<%-- 확인 버튼 --%>
 				<div class="join_submit_button">
-				    <button type="button" class="button_style">
+				    <button type="submit" class="button_style" form="join_input_form">
 				           동의하고 계속하기
 				    </button>
 				</div>

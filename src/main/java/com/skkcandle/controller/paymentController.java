@@ -51,4 +51,5 @@ public class paymentController {
 		
 		return "/payment/payment";
 	}
+	
 }
