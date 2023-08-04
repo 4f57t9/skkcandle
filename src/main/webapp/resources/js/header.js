@@ -25,6 +25,9 @@ function init() {
             color.brown, color.red, color.blue, 
             color.brown, color.red, color.yellow, color.green, color.blue
         );
+	
+	
+
 }
 
 function openCategoryBox() {
