@@ -29,4 +29,9 @@ public class homeController {
 	public String newHeader() {
 		return "newHeader";
 	}
+	
+	@RequestMapping("/qna")
+	public String qna() {
+		return "qna/qna";
+	}
 }

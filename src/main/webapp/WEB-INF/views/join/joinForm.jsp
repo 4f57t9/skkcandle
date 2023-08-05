@@ -28,7 +28,7 @@
 				<%-- 사용자 정보 입력 --%>
 				<div id="join_input">
 					<%-- 이메일(아이디) --%>
-					<form id="join_input_form" method="post" action="join/register">
+					<form id="join_input_form" method="post" action="register">
 						<div class="join_input_userInfo">
 							<label for="userEmail">
 								<span class="join_input_icon_box">
@@ -40,6 +40,8 @@
 								</span>
 							</label>
 						</div>
+						<span id="emailErr1" class="errorMsg text-danger d-none small">이메일은 필수 입력 사항입니다.</span>
+						<span id="emailErr2" class="errorMsg text-danger d-none small">이메일 형식이 맞지 않습니다.</span>
 						<%-- 비밀번호 --%>
 						<div class="join_input_userInfo">
 							<label for="userPassword">
@@ -52,6 +54,8 @@
 								</span>
 							</label>
 						</div>
+						<span id="pwdErr1" class="errorMsg text-danger d-none small">패스워드는 필수 입력 사항입니다.</span>
+			    		<span id="pwdErr2" class="errorMsg text-danger d-none small">8자 이상 입력해야합니다.</span>
 						<%-- 비밀번호 확인 --%>
 						<div class="join_input_userInfo">
 							<label for="userCheckPassword">
@@ -64,6 +68,7 @@
 								</span>
 							</label>
 						</div>
+						<span id="pwdErr3" class="errorMsg text-danger d-none small">비밀번호가 일치하지 않습니다.</span>
 						<%-- 이름 --%>
 						<div class="join_input_userInfo">
 							<label for="userName">
@@ -76,6 +81,7 @@
 								</span>
 							</label>
 						</div>
+						<span id="nameErr1" class="errorMsg text-danger d-none small">이름 필수 입력 사항입니다.</span>
 						<%-- 전화번호 --%>
 						<div class="join_input_userInfo">
 							<label for="userTel">
@@ -88,6 +94,9 @@
 								</span>
 							</label>
 						</div>
+						<span id="phoneErr1" class="errorMsg text-danger d-none small">휴대폰 번호는 필수 입력 사항입니다.</span>
+			    		<span id="phoneErr2" class="errorMsg text-danger d-none small">휴대폰 번호 형식에 맞지않습니다.</span>
+						<%-- 주소 --%>
 						<div class="join_input_userInfo">
 							<label for="userAddress">
 								<span class="join_input_icon_box">
@@ -99,6 +108,7 @@
 								</span>
 							</label>
 						</div>
+						<span id="addressErr1" class="errorMsg text-danger d-none small">주소는 필수 입력 사항입니다.</span>
 					</form>
 				</div>
 				
@@ -106,6 +116,7 @@
 				<div id="join_terms_chkAll">
 				    <div id="join_terms">
 				        <input type="checkbox" id="chk_checkall" aria-hidden="true">
+				        <label for="chk_checkall">
 				        <!-- <label for="chk_checkall" role="checkbox" aria-label="모두 확인하였으며 동의합니다" aria-checked="false">
 				            <i aria-hidden="true" class="icon_chk"></i> -->
 				            <span aria-hidden="true">모두 확인하였으며 동의합니다.</span>
@@ -120,6 +131,7 @@
 				<ul class="join_terms_other">
 			        <div class="join_terms_frame">
 				        <input type="checkbox" id="chk_join-terms-fourteen" name="cbox" >
+				        <label for="chk_join-terms-fourteen">
 				        <!-- <label for="chk_join-terms-fourteen" role="checkbox" aria-label="만 14세 이상입니다" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 만 14세 이상입니다</span>
@@ -127,6 +139,7 @@
 					</div>
 					<div id="c-checkbox-item_join-terms-commerce" class="join_terms_frame">
 				        <input type="checkbox" id="chk_join-terms-commerce" name="cbox">
+				        <label for="chk_join-terms-commerce">
 				       <!--  <label for="chk_join-terms-commerce" role="checkbox" aria-label="전자금융거래 이용약관 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 전자금융거래 이용약관 동의</span>
@@ -134,6 +147,7 @@
 					</div>
 					<div id="c-checkbox-item_join-terms-privacy-collect-use" class="join_terms_frame">
 				        <input type="checkbox" id="chk_join-terms-privacy-collect-use" name="cbox">
+				        <label for="chk_join-terms-privacy-collect-use">
 				        <!-- <label for="chk_join-terms-privacy-collect-use" role="checkbox" aria-label="개인정보 수집 및 이용 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 개인정보 수집 및 이용 동의</span>
@@ -141,6 +155,7 @@
 					</div>
 					<div id="c-checkbox-item_agree-to-collect-third-part-information" class="join_terms_frame">
 				        <input type="checkbox" id="chk_agree-to-collect-third-part-information" name="cbox">
+				        <label for="chk_agree-to-collect-third-part-information">
 				        <!-- <label for="chk_agree-to-collect-third-part-information" role="checkbox" aria-label="개인정보 제3자 제공 동의" aria-checked="false">
 				            <i aria-hidden="true" class="icon-chk"></i> -->
 				            <span aria-hidden="true">[필수] 개인정보 제3자 제공 동의</span>
@@ -150,8 +165,8 @@
    				 
 				<%-- 확인 버튼 --%>
 				<div class="join_submit_button">
-				    <button type="submit" class="button_style" form="join_input_form">
-				           동의하고 계속하기
+				    <button type="submit" class="button_style " form="join_input_form" id="join_success_button" disabled>
+				           회원 가입
 				    </button>
 				</div>
 				

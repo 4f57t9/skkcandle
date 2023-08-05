@@ -24,4 +24,9 @@ public class User {
 	private String userImagesname;
 	
 	private byte[] userImagedata;*/
+	
+	/*private User(String userEmail, String userPassword) {
+		userEmail = this.userEmail;
+		userPassword = this.userPassword;
+	}*/
 }

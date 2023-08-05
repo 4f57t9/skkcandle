@@ -40,4 +40,18 @@ public class UserServiceImpl implements UserService {
 		return JoinResult.SUCCESS;
 	}
 
+	@Override
+	public LoginResult login(User user) {
+		User dbUser = userDao.select(user.getUserEmail());
+		if(dbUser == null) {
+			return LoginResult.FAIL_EMAIL_WRONG;
+		}
+		PasswordEncoder pwEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+		if(pwEncoder.matches(user.getUserPassword(), dbUser.getUserPassword())) {
+			return LoginResult.SUCCESS;
+		}else {
+			return LoginResult.FAIL_PASSWORD_WRONG;
+		}
+	}
+
 }

@@ -8,6 +8,13 @@ public interface UserService {
 		FAIL_DUPLICATED_Email
 	}
 	
+	public enum LoginResult{
+		SUCCESS,
+		FAIL_EMAIL_WRONG,
+		FAIL_PASSWORD_WRONG
+	}
+	
 	public User getUserInfo(String userEmail);
 	public JoinResult join(User user);
+	public LoginResult login(User user);
 }
