@@ -1,9 +1,18 @@
-/*$(init)
+$(init)
 
 function init() {
-	var joinForm = $("#join_input_form");
-	joinForm.submit(checkValidation);
-}*/
+	//login 오류 확인
+	checkLoginErr();
+	
+}
+
+function checkLoginErr(){
+	var loginErr = $("#loginErrMsg").val();
+	console.log("loginErr : "+loginErr);
+	if(loginErr !=""){
+		alert(loginErr);
+	}
+}
 
 function blueBox_email() {
 	var rgb = $(".join_input_userInfo_email").css("border-bottom-color");
@@ -21,8 +30,11 @@ function blueBox_pwd() {
 
 // 유효성 검사
 function checkValidation() {
+	console.log("유효성검사 실행");
 	var errorMsgs = $(".errorMsg");
 	errorMsgs.each(function(index, el) {$(el).addClass("d-none")});
+	
+	isValidation = true;	
 	
 	var email = $("#userEmail").val();
 	if(email === "") {
