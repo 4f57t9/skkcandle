@@ -16,13 +16,12 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Controller
-@RequestMapping("/join")
 public class joinController {
 	
 	@Autowired
 	private UserService userService;
 	
-	@RequestMapping("")
+	@RequestMapping("/join")
 	public String joinmain(@RequestParam(value ="register_msg", defaultValue ="이메일")String register_msg, Model model) {
 		model.addAttribute("register_msg", register_msg);
 		return "join/joinForm";

@@ -28,7 +28,7 @@
 				<%-- 사용자 정보 입력 --%>
 				<div id="join_input">
 					<%-- 이메일(아이디) --%>
-					<form id="join_input_form" method="post" action="join/register">
+					<form id="join_input_form" method="post" action="register">
 						<div class="join_input_userInfo">
 							<label for="userEmail">
 								<span class="join_input_icon_box">

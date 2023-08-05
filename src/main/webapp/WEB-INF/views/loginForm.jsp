@@ -67,15 +67,16 @@
 						<span id="pwdErr1" class="errorMsg text-danger d-none small">패스워드는 필수 입력 사항입니다.</span>
 			    		<span id="pwdErr2" class="errorMsg text-danger d-none small">8자 이상 입력해야합니다.</span>
 						
+						<div></div>
 						<%-- 자동로그인, 아이디 찾기 --%>
-						<div class="login__content login__content--util">
+						<!-- <div class="login__content login__content--util">
                             <label for="login-keep-state" class="autologin_checkbox member__checkbox login__util__keep-login" aria-checked="false">
                                 <input class="member__checkbox__input member__sprite-after member__sprite-after--checkbox _loginRememberInput" type="checkbox" id="login-keep-state">
                                 <span class="member__checkbox__label">자동로그인</span>
                             </label>
                             <a href="https://login.coupang.com/login/accountInfoFind.pang" class="login__link login__link--find-id-password _loginFindIdPwLink"
                             	style="text-decoration: none;">아이디∙비밀번호 찾기 <strong>></strong></a>
-                        </div>
+                        </div> -->
                         <div class="login__content login__content--trigger">
                         	<button class="btn btn-primary btn-block font-weight-bold" onclick="checkValidation()" type="submit" style="padding: 10px 0;">로그인</button>
                             <hr class="login_separator">
