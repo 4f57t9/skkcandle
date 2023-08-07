@@ -23,11 +23,12 @@ function init() {
    //유효성 검사
    var joinButton = $("#join_success_button");
    joinButton.click(checkValidation);
-   
 }
 
 function eventInit() {
+	
 }
+
 //유효성 검사
 function checkValidation(){
 	console.log("유효성 검사 실행");

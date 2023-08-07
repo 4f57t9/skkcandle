@@ -28,7 +28,6 @@
 	      <%@include file ="mainPage/mainPage.jsp" %>      
       </div>
       
-      
       <div>
 	      <%@include file ="footer/footer.jsp" %>      
       </div>

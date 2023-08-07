@@ -20,12 +20,12 @@
 	</head>
 	<body>
 		<h1>상품 문의 페이지</h1>
-	    <form method="post" action="">
+	    <form method="post" action="#">
 	        <label for="title">제목:</label>
 	        <input type="text" id="title" name="title" required>
 	
 	        <label for="content">내용:</label>
-	        <textarea id="content" name="content" rows="5" required></textarea>
+	        <textarea id="content" name="content" rows="5" placeholder="내용을 입력하세요." required></textarea>
 	
 	        <input type="submit" value="문의하기">
 	    </form>
