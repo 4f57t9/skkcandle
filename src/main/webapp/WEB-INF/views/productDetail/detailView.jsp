@@ -1,11 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
 <%@ include file="/WEB-INF/views/header/navHeader.jsp" %>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -20,21 +17,18 @@
 		<!-- External CSS -->
 		<link rel = "stylesheet" href ="resources/css/detailView.css"/>
 		<link rel = "stylesheet" href ="resources/css/header/navHeader.css"/>
+
 	<body>
-	 
-	<div class="container">	
 	
+	<div class="container">	
+      <header>
+      </header>
+		
 		<!-- 상품의 썸네일 & 상세사진 -->
 		
 	  <div class="product">
 	    
 	    <div class="prod_image">
-		    <div class="prod-image_items">
-				<div class="prod-image_item"><img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/48x48ex/image/retail/images/3001384970715826-9c075cc4-28d8-4487-af3f-ba792e8cb3dd.jpg" alt=""></div>
-				<div class="prod-image_item"><img src="https://thumbnail6.coupangcdn.com/thumbnails/remote/48x48ex/image/retail/images/5458539288574952-16ef4df0-9da7-4254-8202-00529d2c7fe5.jpg" alt=""></div>
-				<div class="prod-image_item"><img src="https://thumbnail6.coupangcdn.com/thumbnails/remote/48x48ex/image/retail/images/5458539288574952-16ef4df0-9da7-4254-8202-00529d2c7fe5.jpg" alt=""></div>
-				<div class="prod-image_item"><img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/48x48ex/image/retail/images/5458539199394517-534bd057-d3e3-4ccc-8c0d-24961723771e.jpg" alt=""></div>
-			</div>
 			<div class="prod-image_detail">
 		        <img src="https://thumbnail8.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/3001384970715826-9c075cc4-28d8-4487-af3f-ba792e8cb3dd.jpg" width = "400px" >
 		    </div>
@@ -43,22 +37,9 @@
 		 <!-- 상품 기본정보 등록란 -->
 		 
 	    <div class="prod-buy">
-	     	<div class="product_name"> 
-	     		<h2>${detailproduct.productName}</h2> <!-- 상품 이룸 들어가는 곳 -->
-	     		<h2>${detailproduct.productId}</h2>
-	     		<h2>${detailproduct.productPrice}</h2>
-	     		<h2>${detailproduct.productStock}</h2>
-	
+	     	<div class="product_name">
+	     		<h2>${detailproduct.productName}</h2>
 	     	</div>
-	     	<table>
-		     	<c:forEach var="review" items="${productviews}">
-		            <tr>
-		               <td>${review.reviewTitle}</td>
-		               <td>${review.reviewContent}</td>
-		               <td>${review.ratingScore}</td>
-		            </tr>
-	             </c:forEach>
- 		     </table>   
 	     	
 	     	<!-- 별점 -->
 	     	
@@ -67,23 +48,124 @@
 		 			<span style="width: 93%"></span> 
 		 		</div>  
 		 		<div class="review_count">
-		 			${totalReviewNum}개의 상품평 <!-- 상품평 갯수 들어가는 곳 -->
+		 			${detailproduct.productStock}개의 상품평
 		 		</div> 
 	     	</div>
 	     	
 		 	<hr>
 			<div class="price">
-				${detailproduct.productPrice}원 <!-- 상품 가격 들어가는 곳 -->
-			</div>	
+				${detailproduct.productPrice}원
+			</div>
+			<div class="product-cash">
+                  	<div class="max-cash">
+                  		<img src="//image6.coupangcdn.com/image/badges/cashback/web/list-cash-icon@2x.png" width="14px">
+                  		<span class="reward-cash-txt">최대 345원 적립</span>
+                  	</div>
+            </div>				
 			<hr>
+			<div class="shipping price">
+				무료배송
+			</div>
+			<div class="arrived date">
+				내일(목)6/22 도착 보장
+			</div>
+			<div class="product-reward-cash-container">
+            	<div class="reward-cash-summary">
+                  	<div class="reward-cash-summary_title">
+	                 	<img src="//image6.coupangcdn.com/image/badges/sdp/cashback/web/cash-icon@2x.png" width="20px">
+	                  	<span>캐시적립 혜택</span>
+                  	</div>
+                  	<div class="reward-cash-summary_info">
+                  		<span>|</span>
+                  		<span>최대 <strong>345</strong>원 적립</span>
+                  	</div>
+            	</div>
+                  		
+             <!-- 쿠페이 머니 결제 -->
+             
+             <div class="reward-cash-promotion">
+             	<p>쿠페이 머니 결제 시 1% 적립</p>
+				<p>[로켓와우 + 쿠페이 계좌이체] 결제 시 2% 적립</p>
+				<p>[로켓와우 + 쿠페이 머니] 결제 시 4% 추가적립 <strong>2808일 남음</strong> </p>
+				<button type="button" class="reward-cash-promotion-btn"> 로켓와우 무료체험 신청하기 </button>
+              </div>
+           </div>
+        		   
         	<!-- 장바구니 구매하기 -->
         	
         	<div class="product-buy-footer">
 	        	<button class="product-cart-btn"> 장바구니 담기 </button>
 	            <button class="product-buy-btn"><span>바로구매 ></span></button>
 	        </div>
+        		
+       		<div class="product-description">
+            	<ul>
+                	<li>색상계열: 화이트계열</li>
+                  	<li>구성: 워머+캔들 세트</li>
+                  	<li>쿠팡상품번호: 7058245313 - 17492361940</li>
+                </ul>
+            </div>
 		</div>
     </div>    
+    
+        
+        
+        <!--  함께 비교하면 좋을 상품 목록 -->
+        
+        <div class="recommendation">
+        	<div class="recommendation-inner">
+        		<h2 class="recommendation_title">함께 비교하면 좋을 상품</h2>
+        			<ul>
+        				<li class="rl-itemhps-scroll-item">
+							<div class="rl-item_image">
+								<img src="https://thumbnail10.coupangcdn.com/thumbnails/remote/300x300ex/image/vendor_inventory/9dd3/c9092e14ef6037960d0f0919a79b60eea7c2dee7b7ad77fc8ccb2dabbd9d.jpg" width=150px;>
+							</div>
+							<span class="rl-item_title">유칼립투스 천연 캔들</span>
+							<span class="rl-item_price"><em>46,790원</em></span>
+	        				<img src="https://image10.coupangcdn.com/image/badges/rocket/rocket_logo.png" class="rocket shipping" alt="로켓배송 아이콘" width=50px;>
+	        				<div class="rate"> <span style="width: 60%"></span></div> 
+	        				<div class="review_count">(19)</div>
+        				</li>
+        				<li class="rl-itemhps-scroll-item">
+							<div class="rl-item_image">
+							<img src="https://thumbnail7.coupangcdn.com/thumbnails/remote/300x300ex/image/vendor_inventory/25a7/214e8486c2e6e53b48486b86384762375822c68cee96ffec18780ec9c372.jpg" width=150px;>
+							</div>
+							<span class="rl-item_title">블링블링비주 로즈골드</span>
+							<span class="rl-item_price"><em>46,790원</em></span>
+	        				<img src="https://image10.coupangcdn.com/image/badges/rocket/rocket_logo.png" class="rocket shipping" width=50px;>
+	        				<div class="rate"> <span style="width: 60%"></span></div> 
+	        				<div class="review_count">(1)</div>
+        				</li>
+        				<li class="rl-itemhps-scroll-item">
+							<div class="rl-item_image">
+							<img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/300x300ex/image/retail/images/2339947720086163-139678e9-4234-4e1c-96cc-03c5631c5b4a.jpg" width=150px;>
+							</div>
+							<span class="rl-item_title">크리스탈캔들 워머로즈</span>
+							<span class="rl-item_price"><em>46,790원</em></span>
+	        				<img src="https://image10.coupangcdn.com/image/badges/rocket/rocket_logo.png" class="rocket shipping" alt="로켓배송 아이콘" width=50px;>
+	        				<div class="rate"> <span style="width: 60%"></span></div> <div class="review_count">(593)</div>
+        				</li>
+        				<li class="rl-itemhps-scroll-item">
+							<div class="rl-item_image">
+							<img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/300x300ex/image/vendor_inventory/5f5f/9f633ca20188e441d8077fe2c0d749dc9309cde759848c27650b89989b1c.jpg" width=150px;>
+							</div>
+							<span class="rl-item_title">에인디비주 캔들워커</span>
+							<span class="rl-item_price"><em>46,790원</em></span>
+	        				<img src="https://image10.coupangcdn.com/image/badges/rocket/rocket_logo.png" class="rocket shipping" alt="로켓배송 아이콘" width=50px;>
+	        				<div class="rate"> <span style="width: 60%"></span></div> <div class="review_count">(1)</div>
+        				</li>
+        				<li class="rl-itemhps-scroll-item">
+							<div class="rl-item_image">
+							<img src="https://thumbnail7.coupangcdn.com/thumbnails/remote/300x300ex/image/retail/images/14865344147270-575fa531-3230-44c4-9e0f-a9f91e768f4d.jpg" width=150px;>
+							</div>
+							<span class="rl-item_title">에인디아로마 워머</span>
+							<span class="rl-item_price"><em>46,790원</em></span>
+	        				<img src="https://image10.coupangcdn.com/image/badges/rocket/rocket_logo.png" class="rocket shipping" alt="로켓배송 아이콘" width=50px;>
+	        				<div class="rate"> <span style="width: 60%"></span></div> <div class="review_count">(5)</div>
+        				</li>
+        			</ul>
+        	</div>
+       </div> 
         
         <!-- 상품 필수 정보 -->
         
@@ -241,7 +323,19 @@
 	    			<input class="sdp-review_search" placeholder="상품평을 검색해 보세요." maxlength="30">
 	    		</div>
 	    	
-	    	</section>	
+	    	
+	    	<!-- 후기 및 판매자 정보 -->
+	    	
+	    	<article class="sdp-review_article-list">
+		    	<div class="sdp-review_article_list_info">
+		    	<br>
+		    	<div class="sdp-review_article_list_info_profile"><img src="https://img1a.coupangcdn.com/image/productreview/web/pdp/profile/img-profile-empty.png"></div>  	
+		    	<div class="sdp-review_article_list_info_user">박*훈&nbsp;</div>
+		    	<div class="sdp-review_article_list_info_product-info">2023.05.12</div>
+		    	<div class="sdp-review_article_list_info_product-info_seller_name">판매자: 쿠팡(주)</div>
+	    		<div class="sdp-review_article_list_info_product-info_product-info_name">캔들백화점 스퀘어 크리스탈 루시드 캔들워머 로즈골드화이트+소이 캔들 280g세트</div>
+	    	</article>
+	    </section>	
 	    	<!-- 상품문의 주의란 -->
 	    	
 	    <div class="prod-inquiry-list">
@@ -401,6 +495,47 @@
                   </tr>
                </tbody>
             </table>
+            
+            <!--판매자 정보-->
+            
+            <div class="prod-delivey-item_table product-seller">
+               <p>판매자정보</p>
+               <table class="product-delivery-policy-table">
+                  <tbody>
+                     <tr>
+                        <th>판매자</th>
+                        <td>쿠팡 1577-7011</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <p>미성년자가 체결한 계약은 법정대리인이 동의하지 않는 경우 본인 또는 법정대리인이 취소할 수 있습니다.</p>
+            </div>
+            
+        <!-- 고르고 골랐어요 -->
+        
+        <div class="bottom-banner">
+           <div class="sdp-bottom-banner-header">
+           <br><br><br>
+           	<h4 class="banner-title">고르고 골랐어요</h4>
+            <br>
+           	</div>
+            	<a class="banner-link" href="https://www.coupang.com/vp/products/6555208159?itemId=14649998015&vendorItemId=81891505305&sourceType=SDP_BOTTOM_BANNER&clickEventId=c71f8574-ac8d-4c00-b678-257a3242d777&isAddedCart=">
+                 <div class="sdp-bottom-banner-content">
+	             	<div class="sdp-bottom-banner-info">
+	                	<div class="sdp-bottom-banner-thumb">
+	                    	<img src="https://thumbnail7.coupangcdn.com/thumbnails/remote/292x292ex/image/vendor_inventory/0603/a677eabca00d335ad77331b2b7813f32a82a2810424a8e339e2c70f79990.jpg">
+	                     </div>
+		               <div class ="item-rating">
+		                     <span class="rating-stars"></span>
+		                </div>
+		                <br>
+		                <div class="item-link-button">
+		                     <button type="button" class ="button"><img src="https://static.coupangcdn.com/image/cmg/common/cta/circle-56.png"></button>
+	                    </div>
+                  	</div>
+                  </div>	
+                </a>
+           </div>      
 		</div>    
 	</body>
 </html>

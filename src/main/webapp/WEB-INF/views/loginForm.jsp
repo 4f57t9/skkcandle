@@ -6,7 +6,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="http://www.google.com/s2/favicons?domain=https://login.coupang.com/login/memberJoinFrm.pang" type="image/x-ico">
-		<link rel="stylesheet" href="loginForm.css">
 		<title>로그인</title>
 		
 		<!-- Bootstrap을 사용하기 위한 외부 라이브러리 가져오기 -->
@@ -14,22 +13,23 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-		
-		<script src="loginForm.js"></script>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/loginForm.css">
+		<script src="${pageContext.request.contextPath}/resources/js/loginForm.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
 			<header class="text-center pt-5">
 				<a href="http://www.coupang.com">
-					<img src="//static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png"
-						style="width: 195px; height: 46px;" />
+					<img src="${pageContext.request.contextPath}/resources/images/skkcandle_nuki2.png"
+						style="width: 250px; " />
 				</a>
 			</header>
+			<input type="hidden" class="d-none" id="loginErrMsg" value="${loginErrMsg }" >
 			
 			<section id="login_section">
 				<div id="join_input">
 					<%-- 이메일(아이디) --%>
-					<form id="join_input_form" method="post" action="#" novalidate>
+					<form id="join_input_form" method="post" action="login" novalidate>
 						<div class="join_input_userInfo_email">
 							<label for="userEmail">
 								<span class="join_input_icon_box">
@@ -67,33 +67,34 @@
 						<span id="pwdErr1" class="errorMsg text-danger d-none small">패스워드는 필수 입력 사항입니다.</span>
 			    		<span id="pwdErr2" class="errorMsg text-danger d-none small">8자 이상 입력해야합니다.</span>
 						
+						<div></div>
 						<%-- 자동로그인, 아이디 찾기 --%>
-						<div class="login__content login__content--util">
+						<!-- <div class="login__content login__content--util">
                             <label for="login-keep-state" class="autologin_checkbox member__checkbox login__util__keep-login" aria-checked="false">
                                 <input class="member__checkbox__input member__sprite-after member__sprite-after--checkbox _loginRememberInput" type="checkbox" id="login-keep-state">
                                 <span class="member__checkbox__label">자동로그인</span>
                             </label>
                             <a href="https://login.coupang.com/login/accountInfoFind.pang" class="login__link login__link--find-id-password _loginFindIdPwLink"
                             	style="text-decoration: none;">아이디∙비밀번호 찾기 <strong>></strong></a>
-                        </div>
+                        </div> -->
                         <div class="login__content login__content--trigger">
                         	<button class="btn btn-primary btn-block font-weight-bold" onclick="checkValidation()" type="submit" style="padding: 10px 0;">로그인</button>
                             <hr class="login_separator">
-                            <a href="joinForm.jsp" class="btn btn-light btn-block font-weight-bold border border-gray" style="padding: 10px 0;">회원가입</a>
+                            <a href="join" class="btn btn-light btn-block font-weight-bold border border-gray" style="padding: 10px 0;">회원가입</a>
                     	</div>
 					</form>
 				</div>
 				
 				<%-- tip 메세지 --%>
-				<div id="helpMessage">
+				<!-- <div id="helpMessage">
 					<p>법인 고객이신가요?</p>
 					<p>사업자 회원으로 전용 특가 혜택을 누려보세요.</p>
 					<a href="joinForm.jsp" style="text-decoration: none; color: blue;">쿠팡비즈 간편가입 <strong>></strong></a>
-				</div>
+				</div> -->
 			</section>
 			
 			<footer id="footer">
-				<p>©Coupang Corp. All rights reserved.</p>
+				<p>©Skks Corp. All rights reserved.</p>
 			</footer>
 		</div>
 	</body>

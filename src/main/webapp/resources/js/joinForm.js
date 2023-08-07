@@ -18,7 +18,7 @@ $(function() {
         }
     });
 
-
+$(init);
 function init() {
    //유효성 검사
    var joinButton = $("#join_success_button");
@@ -32,6 +32,8 @@ function eventInit() {
 //유효성 검사
 function checkValidation(){
 	console.log("유효성 검사 실행");
+	
+	isValidation = true;
 	
 	//모든 에러문구 d-none 으로 초기화
 	var errorMsgs = $(".errorMsg");
@@ -86,8 +88,9 @@ function checkValidation(){
 	if(phone === ""){
 		isValidation = false;
 		var phoneErr1 = $("#phoneErr1");
+		phoneErr1.removeClass("d-none");
 	}else{
-		var pattern = /^(010|011|016|017|018|019)-[^0][0-0]{3,4}-[0-9]{4}/;
+		var pattern = /^010[0-9]{4}[0-9]{4}$/;
 		var result = pattern.test(phone);
 		if(!result){
 			isValidation = false;
